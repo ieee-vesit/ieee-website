@@ -1,5 +1,8 @@
 import React from "react";
 import "./Aboutus.css";
+import img1 from '../../assets/veslogo.jpeg'
+import img2 from '../../assets/advancing tech.png'
+import img3 from '../../assets/logo.png'
 
 const Aboutus = () => {
   return (
@@ -22,7 +25,7 @@ const Aboutus = () => {
         </div>
 
         <div className="pic1">
-          <img src="src\assets\veslogo.jpeg" />
+          <img src={img1} />
         </div>
       </div>
 
@@ -30,7 +33,7 @@ const Aboutus = () => {
 
       <div className="para2">
         <div className="pic2">
-          <img src="src\assets\advancing tech.png" />
+          <img src={img2} />
         </div>
 
         <div className="p2">
@@ -64,7 +67,7 @@ const Aboutus = () => {
           presentations, etc, IEEE-VESIT has it all!
         </div>
         <div className="pic3">
-          <img src="src\assets\logo.png" />
+          <img src={img3} />
         </div>
       </div>
     </div>

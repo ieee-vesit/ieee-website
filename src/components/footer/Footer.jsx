@@ -8,7 +8,7 @@ export default function Footer() {
       <footer className="bg-[var(--white)] py-8">
         <div className="flex items-center justify-between my-4">
           <div className="border-t border-[var(--black)] flex-grow mx-2"></div>
-          <p className="text-[var(--p)] font-semibold italic text-center">Innovating Tomorrow Empowering Today</p>
+          <p className="text-[var(--small)] font-semibold italic text-center">Innovating Tomorrow Empowering Today</p>
           <div className="border-t border-[var(--black)] flex-grow mx-2"></div>
         </div>
 
@@ -19,7 +19,7 @@ export default function Footer() {
               src={logo} // Updated to forward slashes
               alt="IEEE-VESIT Logo"
               className="mx-auto lg:mx-0 mb-2"
-              style={{ maxHeight: "150px" }}
+              style={{ maxHeight: "120px" }}
             />
             <h2 className="text-lg font-semibold mb-2 text-[var(--black)] text-center">IEEE VESIT</h2>
           </div>
@@ -29,29 +29,29 @@ export default function Footer() {
             <h2 className="text-lg font-semibold mb-2 text-[var(--black)]">Quick Links</h2>
             <ul>
             <Link to="/"><li>
-                <a className="hover:text-[var(--color3)]">
+                <small className="hover:text-[var(--color3)]">
                   Home
-                </a>
+                </small>
               </li></Link>
               <Link to="/vesit_tank"><li>
-                <a className="hover:text-[var(--color3)]">
+                <small className="hover:text-[var(--color3)]">
                   Upcoming
-                </a>
+                </small>
               </li></Link>
               <Link to="/current_council"><li>
-                <a className="hover:text-[var(--color3)]">
+                <small className="hover:text-[var(--color3)]">
                   Council
-                </a>
+                </small>
               </li></Link>
               <Link to="/contact"><li>
-                <a className="hover:text-[var(--color3)]">
+                <small className="hover:text-[var(--color3)]">
                   Contact Us
-                </a>
+                </small>
               </li></Link>
               <Link to="/"><li>
-                <a className="hover:text-[var(--color3)]">
+                <small className="hover:text-[var(--color3)]">
                   Developers
-                </a>
+                </small>
               </li></Link>
             </ul>
           </div>
@@ -59,19 +59,19 @@ export default function Footer() {
           {/* Contact Us */}
           <div className="lg:text-left">
             <h2 className="text-lg font-semibold mb-2 text-[var(--black)] text-center lg:text-left">Contact us</h2>
-            <p className="mt-2 flex flex-row text-center lg:text-left gap-4 text-[var(--black)] ">
+            <small className="mt-2 flex flex-row text-center lg:text-left gap-4 text-[var(--black)] ">
               {/* <i className="fa-solid fa-location-crosshairs text-2xl"></i> */}
               Vivekanand Education Society's Institute Of Technology
               <br />
               Hashu Advani Memorial Complex,
               <br />
               Collector's Colony, Chembur, Mumbai, Maharashtra 400074
-            </p>
+            </small>
             <p className="mt-6 flex flex-row items-start text-center justify-center lg:justify-start gap-4 text-[var(--black)]">
               {/* <i className="fa-solid fa-headset text-2xl"></i> */}
-              <a href="tel:+919867615388" className="hover:text-[var(--color3)]">
+              <small href="tel:+919867615388" className="hover:text-[var(--color3)]">
                 +91 9867615388 - Gaurang Rane (Chairperson)
-              </a>
+              </small>
             </p>
           </div>
 
@@ -79,32 +79,32 @@ export default function Footer() {
           <h2 className="text-lg font-semibold mb-2 text-[var(--black)] text-center lg:text-left">Social Links</h2>
             <ul>
               <li>
-                <a href="https://www.instagram.com/ieee_vesit/" target="_blank" className="hover:text-[var(--color3)] flex flex-row items-center justify-center lg:justify-start gap-2">
+                <small href="https://www.instagram.com/ieee_vesit/" target="_blank" className="hover:text-[var(--color3)] flex flex-row items-center justify-center lg:justify-start gap-2">
                   <i className="fa-brands fa-instagram text-2xl"></i>
                   <span className="ml-2">ieee_vesit</span>
-                </a>
+                </small>
               </li>
               <li>
-                <a href="https://www.linkedin.com/company/ieeevesit/" target="_blank" className="hover:text-[var(--color3)] flex flex-row items-center justify-center lg:justify-start gap-2">
+                <small href="https://www.linkedin.com/company/ieeevesit/" target="_blank" className="hover:text-[var(--color3)] flex flex-row items-center justify-center lg:justify-start gap-2">
                   <i className="fa-brands fa-linkedin-in text-2xl"></i>
                   <span className="ml-2">ieeevesit</span>
-                </a>
+                </small>
               </li>
               <li>
-                <a href="https://github.com/ieee-vesit" target="_blank" className="hover:text-[var(--color3)] flex flex-row items-center justify-center lg:justify-start gap-2">
+                <small href="https://github.com/ieee-vesit" target="_blank" className="hover:text-[var(--color3)] flex flex-row items-center justify-center lg:justify-start gap-2">
                   <i className="fa-brands fa-github text-2xl"></i>
                   <span className="ml-2">ieee-vesit</span>
-                </a>
+                </small>
               </li>
               <li>
-                <a
+                <small
                   href="mailto:ieee.vesit@ves.ac.in" target="_blank"
                   className="hover:text-[var(--color3)] flex flex-row items-center justify-center lg:justify-start gap-2"
                   rel="noopener noreferrer"
                 >
                   <i className="fa-solid fa-at text-2xl"></i>
                   <span className="ml-2">ieee.vesit@ves.ac.in</span>
-                </a>
+                </small>
               </li>
             </ul>
           </div>

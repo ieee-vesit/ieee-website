@@ -43,7 +43,7 @@ const Testimonials = () => {
         {testimonials.map((testimonial, index) => (
           <div
             key={index}
-            className={`${bgColors[index % bgColors.length]} p-6 shadow-lg flex flex-col items-center text-justify`}
+            className={`${bgColors[index % bgColors.length]} p-6 shadow-lg flex flex-col items-center text-justify rounded-[10px]`}
           >
             <img
               src={testimonial.image}

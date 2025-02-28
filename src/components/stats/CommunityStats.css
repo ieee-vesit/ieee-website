@@ -24,6 +24,7 @@
   background-color: var(--white);
   width: 30%;
   height: 120px;
+  border-radius: 10px;
 }
 
 /* .card-title {
