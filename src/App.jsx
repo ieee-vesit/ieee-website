@@ -1,6 +1,4 @@
 import { useState } from 'react';
-import ProvideInformation from './components/extra-details/ProvideInformation';
-import Industries from './components/Darkb/Darkb';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import CurrentCouncil from "./pages/CurrentCouncil";
