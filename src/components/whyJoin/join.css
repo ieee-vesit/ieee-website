@@ -30,7 +30,7 @@
     width: 400px;
     height: 270px;
     background-color: var(--color1);
-    /* border-radius: 20px; Corner Radius */
+    border-radius: 10px; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;  /* Align content to the top of the card */

@@ -11,6 +11,8 @@ import ContactPage from "./pages/ContactPage";
 import JoinPage from "./pages/JoinPage";
 import { VesitTank } from "./pages/workshops/VesitTank";
 import ScrollToTop from "./ScrollToTop";
+import PrevCouncil1 from './pages/PrevCouncil1';
+import Developers from './pages/Developers';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/current_council" element={<CurrentCouncil />} />
+          <Route path="/council23-24" element={<PrevCouncil1 />} />
+          <Route path="/developers" element={<Developers />} />
           <Route path="/events" element={<Events />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/join_ieee" element={<JoinPage />} />

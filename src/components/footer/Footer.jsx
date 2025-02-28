@@ -48,7 +48,7 @@ export default function Footer() {
                   Contact Us
                 </small>
               </li></Link>
-              <Link to="/"><li>
+              <Link to="/developers"><li>
                 <small className="hover:text-[var(--color3)]">
                   Developers
                 </small>

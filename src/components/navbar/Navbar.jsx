@@ -95,7 +95,7 @@ const Navbar = () => {
               <i className={`bx bxs-chevron-down arrow ${activeDropdown === "council" ? "rotate" : ""}`}></i>
               <ul className={`sub-menu ${activeDropdown === "council" ? "show" : ""}`}>
                 <Link to="/current_council" onClick={closeSidebar}><li><a href="#" className="uppercase">Year (24-25)</a></li></Link>
-                <li><a href="#" className="uppercase" onClick={closeSidebar}>Year (23-24)</a></li>
+                <Link to="/council23-24" onClick={closeSidebar}><li><a href="#" className="uppercase" onClick={closeSidebar}>Year (23-24)</a></li></Link>
               </ul>
             </li>
 
@@ -109,7 +109,7 @@ const Navbar = () => {
                 {/* <li><a href="#" className="uppercase" onClick={closeSidebar}>Magazines</a></li> */}
               </ul>
             </li>
-            <li><a href="#" onClick={closeSidebar}>DEVELOPERS</a></li>
+            <Link to="/developers" onClick={closeSidebar}><li><a href="#" onClick={closeSidebar}>DEVELOPERS</a></li></Link>
             <Link to="/contact" onClick={closeSidebar}><li><a href="#" onClick={closeSidebar}>CONTACT</a></li></Link>
             <Link to="/vesit_tank" onClick={closeSidebar}><li className="bg-[color:--color3] hover:!bg-[color:--white] duration-500"><a href="#" onClick={closeSidebar}><i class="fa-solid fa-arrow-pointer"></i> REGISTER</a></li></Link>
             <Link to="/join_ieee" onClick={closeSidebar}><li className="bg-[color:--color2] hover:!bg-[color:--white] duration-500"><a href="#" onClick={closeSidebar}><i class="fa-solid fa-hat-cowboy"></i> JOIN IEEE</a></li></Link>
