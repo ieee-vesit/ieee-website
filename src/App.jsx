@@ -11,7 +11,6 @@ import ContactPage from "./pages/ContactPage";
 import JoinPage from "./pages/JoinPage";
 import { VesitTank } from "./pages/workshops/VesitTank";
 import ScrollToTop from "./ScrollToTop";
-import Societies from "./components/Societies-3/Societies";
 
 function App() {
   return (
