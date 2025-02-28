@@ -1,0 +1,79 @@
+/* General styles */
+.industries {
+    background-color: #002f6c; /* Dark Blue */
+    color: white; /* All text in white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+/* Layout container */
+.industries-container {
+    display: flex;
+    max-width: 1100px;
+    width: 100%;
+    padding-top: 50px;
+}
+
+/* Heading on the left */
+.industries-heading {
+    flex: 1;
+    padding-right: 40px;
+    text-align: left;
+    padding-top: 80px;
+}
+
+.industries-heading h2 {
+    font-size: 30px;
+    max-width: 300px;
+    color: white; 
+    font-weight: 600;
+    
+}
+
+.industry-table {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Each row containing two industries */
+.industry-row {
+    display: flex;
+    gap: 20px;
+}
+
+/* Individual industry box */
+.industry {
+    background: #002f6c; /* Slightly lighter blue */
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+    text-align: left;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    color: white; /* Ensures all text in the box is white */
+}
+
+
+/* Icons */
+.icon {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: white; /* Ensures icons are white */
+}
+
+/* Headings and descriptions */
+.industry h3 {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: white; /* Ensures industry titles are white */
+}
+
+.industry p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: white; /* Ensures descriptions are white */
+}
