@@ -1,0 +1,184 @@
+/* General Styles */
+.wie-page {
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Hero Section */
+  .wie-hero {
+    background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+    color: white;
+    padding: 4rem 2rem;
+  }
+  
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .hero-left {
+    flex: 1;
+    min-width: 300px;
+    padding: 1rem;
+  }
+  
+  .hero-left h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-left h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+  
+  .hero-left p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
+  }
+  
+  .hero-right {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+  
+  .hero-right img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+  
+  .wie-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: white;
+    color: #6e48aa;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .wie-button:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Team Section */
+  .wie-team {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  .team-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .team-container h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #6e48aa;
+  }
+  
+  .team-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  /* Info Section */
+  .wie-info {
+    padding: 4rem 2rem;
+    background-color: white;
+  }
+  
+  .info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .info-heading {
+    flex: 1;
+    margin-right: 3rem;
+  }
+  
+  .info-heading h2 {
+    font-size: 3rem;
+    color: #6e48aa;
+  }
+  
+  .info-table {
+    flex: 2;
+    min-width: 300px;
+    padding: 1rem;
+  }
+  
+  .info-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .info-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .info-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #6e48aa;
+  }
+  
+  /* Content Section */
+  .wie-content {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  .content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .content-container p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .hero-container, .info-container {
+      flex-direction: column;
+    }
+    
+    .hero-left, .hero-right, .info-heading, .info-table {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .hero-left p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }

@@ -1,9 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './Header.css';
+
 import img1 from '../../assets/maam.jpg';
 import img2 from '../../assets/head.png';
-import img3 from '../../assets/council.png';
-import img4 from '../../assets/ml.jpg';
+import img3 from '../../assets/ml.jpg';
+import img4 from '../../assets/council.png';
 
 const Header = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,8 +16,8 @@ const Header = () => {
   const slides = [
     { img: img1, title: 'MAGIC SLIDER', type: 'FLOWER', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...' },
     { img: img2, title: 'MAGIC SLIDER', type: 'NATURE', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...' },
-    { img: img3, title: 'MAGIC SLIDER', type: 'PLANT', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...' },
-    { img: img4, title: 'MAGIC SLIDER', type: 'NATURE', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...' },
+    { img: img3, title: 'MAGIC SLIDER', type: 'NATURE', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...' },
+    { img: img4, title: 'MAGIC SLIDER', type: 'PLANT', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...' },
   ];
 
   // Function for next and previous buttons

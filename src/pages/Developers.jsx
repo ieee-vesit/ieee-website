@@ -19,6 +19,24 @@ const Developers = () => {
             <div className="w-full mx-auto px-4 flex flex-col items-center my-8">
           {/* <h3 className="uppercase my-8">council for AY 23 - 34</h3> */}
           <div className="w-full flex flex-row flex-wrap justify-center items-center gap-8">
+          <Card
+              name="Sneha Ramesh Sumbe"
+              role="Senior Web Editor"
+              image={img1}
+              instagram="https://instagram.com/krish"
+              linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              github="https://github.com/Gaurang0311"
+              email="2021.sneha.sumbe@ves.ac.in"
+            />
+            <Card
+              name="Kirti Srinivas Eppanapelli"
+              role="Senior Editor"
+              image={img1}
+              instagram="https://instagram.com/krish"
+              linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              github="https://github.com/Gaurang0311"
+              email="d2021.kirti.eppanapelli@ves.ac.in"
+            />
             <Card
               name="Pratham Matkar"
               role="Jr. Web Editor"
@@ -42,6 +60,15 @@ const Developers = () => {
               linkedin="https://www.linkedin.com/in/arnavsawant9/"
               github="https://github.com/arnavsawant9"
               email="2022.arnav.sawant@ves.ac.in"
+            />
+            <Card
+              name="Anjali Thakrani"
+              role="Jr. Web Editor"
+              image={img1}
+              instagram="https://instagram.com/krish"
+              linkedin="https://www.linkedin.com/in/anjali-thakrani"
+              github="https://github.com/anjalithakrani"
+              email="2022.anjali.thakrani@ves.ac.in"
             />
             <Card
               name="Krish Dambir"
