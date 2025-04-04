@@ -5,6 +5,7 @@ import "./WIE.css";
 import logo from "../../assets/ieee_wie_purple_4c.png";
 import Reet from "../../assets/TEs/Reet.jpg";
 import img1 from "../../assets/test_img.jpg";
+import aditri from "../../assets/BEs/aditri.png";
 
 const Wie = () => {
   const wieInfo = [
@@ -49,11 +50,10 @@ const Wie = () => {
           <div className="team-cards">
             <Card
               name="Aditri Vishwas"
-              role="Women in Engineering"
-              image={img1}
-              instagram="https://instagram.com/krish"
-              linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Gaurang0311"
+              role=" Women in Engineering"
+              image={aditri}
+              linkedin="https://www.linkedin.com/in/aditri-vishwas-382780280"
+              github="https://github.com/aditri31"
               email="2021.aditri.vishwas@ves.ac.in"
             />
             <Card

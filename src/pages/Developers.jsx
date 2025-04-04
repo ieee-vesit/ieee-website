@@ -1,8 +1,8 @@
 import React from "react";
 import Card from "../components/Card/Card";
 import img1 from "../assets/test_img.jpg";
-import pratham from "../assets/TEs/pratham.jpg";
-import Rakshit from "../assets/TEs/Rakshit.jpg";
+import pratham from "../assets/TEs/pratham.png";
+import Rakshit from "../assets/TEs/Rakshit.png";
 import Harsh from "../assets/SECouncil/HarshPatil_.jpg";
 import Krish from "../assets/SECouncil/KrishDambir.JPG";
 import nafeesa from "../assets/SECouncil/nafeesa.JPG";
@@ -10,6 +10,9 @@ import Sudarsana_Krishnan from "../assets/SECouncil/Sudarsana_Krishnan.jpg";
 import Arnav from "../assets/TEs/Arnav.jpg";
 import Shantanu from "../assets/SECouncil/Shantanu_.jpg";
 import Anushka from "../assets/SECouncil/Anushka.JPG";
+import sneha from "../assets/BEs/sneha.png";
+import kirti from "../assets/BEs/kirti.png";
+import anjali from "../assets/TEs/anjali.png"
 
 const Developers = () => {
   return (
@@ -19,22 +22,18 @@ const Developers = () => {
             <div className="w-full mx-auto px-4 flex flex-col items-center my-8">
           {/* <h3 className="uppercase my-8">council for AY 23 - 34</h3> */}
           <div className="w-full flex flex-row flex-wrap justify-center items-center gap-8">
-          <Card
+            <Card
               name="Sneha Ramesh Sumbe"
               role="Senior Web Editor"
-              image={img1}
-              instagram="https://instagram.com/krish"
-              linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Gaurang0311"
+              image={sneha}
+              linkedin="https://www.linkedin.com/in/sneha-sumbe-642b45260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               email="2021.sneha.sumbe@ves.ac.in"
             />
             <Card
               name="Kirti Srinivas Eppanapelli"
               role="Senior Editor"
-              image={img1}
-              instagram="https://instagram.com/krish"
-              linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Gaurang0311"
+              image={kirti}
+              linkedin="https://www.linkedin.com/in/kirti-eppanapelli?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
               email="d2021.kirti.eppanapelli@ves.ac.in"
             />
             <Card
@@ -64,7 +63,7 @@ const Developers = () => {
             <Card
               name="Anjali Thakrani"
               role="Jr. Web Editor"
-              image={img1}
+              image={anjali}
               instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/anjali-thakrani"
               github="https://github.com/anjalithakrani"

@@ -7,7 +7,7 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import ContactPage from "./pages/ContactPage";
 import JoinPage from "./pages/JoinPage";
-import { VesitTank } from "./pages/workshops/VesitTank";
+import VesitTank from "./pages/workshops/VesitTank";
 import ScrollToTop from "./ScrollToTop";
 import PrevCouncil1 from './pages/PrevCouncil1';
 import Developers from './pages/Developers';
