@@ -6,7 +6,7 @@ import Faq from '../components/Faq/Faq'
 const JoinPage = () => {
   return (
     <div className='mt-24'>
-      <h2 className="text-center uppercase">Join IEEE</h2>
+      <h2 className="text-center uppercase">Join IEEE - VESIT</h2>
         <Join/>
         <Membership/>
     </div>
