@@ -15,6 +15,7 @@ import WIE from './pages/WIE/WIE'
 import Darkb from './components/Darkb/Darkb'
 import Societies3 from './components/Societies-3/Societies'
 import Calendar from './components/Calendar/Calendar.jsx';
+import CI from "./pages/CI/CI.jsx"
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/join_ieee" element={<JoinPage />} />
           <Route path="/vesit_tank" element={<VesitTank />} />
           <Route path="/societies/wie" element={<WIE />} />
+          <Route path="/societies/ci" element={<CI/>} />
           <Route path="/societies/calendar" element={<Calendar/>} />
         </Routes>
         <Footer />
