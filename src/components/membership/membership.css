@@ -80,6 +80,11 @@
     margin-bottom: 10px;
 }
 
+.membership-card{
+    height: 500px;
+    margin-inline: 2rem;
+}
+
 @media (max-width: 1024px) {
     .card-container {
         flex-direction: column;

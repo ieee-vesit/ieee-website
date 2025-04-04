@@ -5,7 +5,7 @@ import img1 from "../../assets/photo.jpeg";
 const teamMembers = [
   {
     name: "Dr. Gresha Bhatia",
-    role: "Professor and mentor in the engineering department.",
+    role: "Deupty Head of Department - Computer Engineering",
     email: "gresha@example.com",
     linkedin: "https://www.linkedin.com/in/gresha",
     github: "https://github.com/gresha",
@@ -14,7 +14,7 @@ const teamMembers = [
   },
   {
     name: "Dr. Ashwini Sawant",
-    role: "Head of research and development.",
+    role: "assistant Professor - Electronics and Telecommunication Engineering",
     email: "ashwini@example.com",
     linkedin: "https://www.linkedin.com/in/ashwini",
     github: "https://github.com/ashwini",
@@ -71,36 +71,36 @@ export default function Forms() {
           <input
             type="text"
             placeholder="Your Name"
-            className="flex-1 p-3 bg-[var(--color2)] shadow-md placeholder-[var(--black)] focus:outline-none"
+            className="flex-1 p-3 bg-[var(--color2)] shadow-md placeholder-[var(--black)] focus:outline-none rounded-xl"
           />
           <input
             type="text"
             placeholder="Contact Number"
-            className="flex-1 p-3 bg-[var(--color2)] shadow-md placeholder-[var(--black)] focus:outline-none"
+            className="flex-1 p-3 bg-[var(--color2)] shadow-md placeholder-[var(--black)] focus:outline-none rounded-xl"
           />
         </div>
         <div className="flex flex-col sm:flex-row gap-3 mb-4">
           <input
             type="text"
             placeholder="Year"
-            className="flex-1 p-3 bg-[var(--color2)] shadow-md placeholder-[var(--black)] focus:outline-none"
+            className="flex-1 p-3 bg-[var(--color2)] shadow-md placeholder-[var(--black)] focus:outline-none rounded-xl"
           />
           <input
             type="text"
             placeholder="Branch"
-            className="flex-1 p-3 bg-[var(--color2)] shadow-md placeholder-[var(--black)] focus:outline-none"
+            className="flex-1 p-3 bg-[var(--color2)] shadow-md placeholder-[var(--black)] focus:outline-none rounded-xl"
           />
         </div>
         <input
           type="email"
           placeholder="Your Email"
-          className="w-full p-3 mb-4 bg-[var(--color2)] shadow-md placeholder-[var(--black)] focus:outline-none"
+          className="w-full p-3 mb-4 bg-[var(--color2)] shadow-md placeholder-[var(--black)] focus:outline-none rounded-xl"
         />
         <textarea
           placeholder="Your Message"
-          className="w-full p-3 h-28 bg-[var(--color2)] shadow-md placeholder-[var(--black)] focus:outline-none"
+          className="w-full p-3 h-28 bg-[var(--color2)] shadow-md placeholder-[var(--black)] focus:outline-none rounded-xl"
         ></textarea>
-        <button className="w-full p-3 mt-4 rounded-full bg-[var(--color3)] text-white text-lg font-semibold cursor-pointer hover:bg-[var(--color4)]">
+        <button className="w-full p-3 mt-4 bg-[var(--color3)] text-white text-lg font-semibold cursor-pointer hover:bg-[var(--color4)] rounded-xl">
           Submit
         </button>
       </div>
@@ -110,7 +110,7 @@ export default function Forms() {
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="mb-2 p-3 shadow-md overflow-hidden transition-all duration-500 ease-in-out"
+            className="mb-2 p-3 shadow-md overflow-hidden transition-all duration-500 ease-in-out rounded-xl"
             style={{ backgroundColor: `var(${member.bgColor})` }}
           >
             <div
@@ -141,9 +141,6 @@ export default function Forms() {
                 </a>
                 <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
                   <FaLinkedin />
-                </a>
-                <a href={member.github} target="_blank" rel="noopener noreferrer">
-                  <FaGithub />
                 </a>
               </div>
             </div>

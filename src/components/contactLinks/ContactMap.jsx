@@ -4,34 +4,6 @@ import "./ContactMap.css";
 const ContactMap = () => {
   return (
     <div className="comp">
-      <div className="cardx-container">
-        <div className="cardx">
-          <a href="https://www.instagram.com/ieee_vesit/" target="_blank" rel="noopener noreferrer">
-            <img src="https://www.iconpacks.net/icons/2/free-instagram-logo-icon-3497-thumb.png" alt="Instagram Logo" className="icon" />
-          </a>
-          <a href="https://www.instagram.com/ieee_vesit/" target="_blank" rel="noopener noreferrer" className="username-link">
-            <p className="username">@ieee_vesit</p>
-          </a>
-        </div>
-
-        <div className="cardx">
-          <a href="https://www.linkedin.com/company/ieeevesit/" target="_blank" rel="noopener noreferrer">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Linkedin_circle_black-512.png?20190209090242" alt="LinkedIn Logo" className="icon" />
-          </a>
-          <a href="https://www.linkedin.com/company/ieeevesit/" target="_blank" rel="noopener noreferrer" className="username-link">
-            <p className="username">ieeevesit</p>
-          </a>
-        </div>
-
-        <div className="cardx">
-          <a href="mailto:ieee.vesit@ves.ac.in">
-            <img src="https://static.vecteezy.com/system/resources/previews/020/009/598/non_2x/email-and-mail-icon-black-free-png.png" alt="IEEE Email" className="icon" />
-          </a>
-          <a href="mailto:ieee.vesit@ves.ac.in" className="username-link">
-            <p className="username">ieee.vesit@ves.ac.in</p>
-          </a>
-        </div>
-      </div>
 
       <div className="map-container mt-8">
         <iframe 
