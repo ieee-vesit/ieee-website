@@ -63,7 +63,6 @@ const CurrentCouncil = () => {
               name="Gaurang Pramod Rane"
               role="Chairperson"
               image={gaurang}
-              instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               github="https://github.com/Gaurang0311"
               email="2021.gaurang.rane@ves.ac.in"
@@ -72,9 +71,8 @@ const CurrentCouncil = () => {
               name="Anoushka Menon"
               role="Chief Executive Officer"
               image={anoushka}
-              instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Gaurang0311"
+              github="https://github.com/anoushkamenon15"
               email="2021.anoushka.menon@ves.ac.in "
             />
             </div>
@@ -96,7 +94,7 @@ const CurrentCouncil = () => {
               role="Chief Executive Officer"
               image={anoushka}
               instagram="https://instagram.com/krish"
-              linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              linkedin="https://www.linkedin.com/in/anoushka-menon-5b2ab5260/"
               github="https://github.com/Gaurang0311"
               email="2021.anoushka.menon@ves.ac.in "
             />
@@ -104,72 +102,57 @@ const CurrentCouncil = () => {
               name="Kaushik Puli"
               role="Senior Public Relations Head"
               image={kaushik}
-              instagram="https://instagram.com/krish"
-              linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Gaurang0311"
+              linkedin="https://www.linkedin.com/in/kaushik-puli-451943260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               email="2021.kaushika.puli@ves.ac.in"
             />
             <Card
               name="Rishika Chaubal"
               role="Senior Graphics Head"
               image={rishika}
-              instagram="https://instagram.com/krish"
-              linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Gaurang0311"
+              linkedin="https://www.linkedin.com/in/rishika-chaubal-712629287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               email="2021.rishika.chaubal@ves.ac.in"
             />
             <Card
               name="Prasad Gourshettiwar"
               role="Senior Treasurer"
               image={img1}
-              instagram="https://instagram.com/krish"
-              linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Gaurang0311"
+              linkedin="https://www.linkedin.com/in/prasad-gourshettiwar-4aa716227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               email="2021.prasad.gourshettiwar@ves.ac.in"
             />
             <Card
               name="Sneha Ramesh Sumbe"
               role="Senior Web Editor"
               image={sneha}
-              instagram="https://instagram.com/krish"
-              linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Gaurang0311"
+              linkedin="https://www.linkedin.com/in/sneha-sumbe-642b45260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               email="2021.sneha.sumbe@ves.ac.in"
             />
             <Card
               name="Kirti Srinivas Eppanapelli"
               role="Senior Editor"
               image={kirti}
-              instagram="https://instagram.com/krish"
-              linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Gaurang0311"
+              linkedin="https://www.linkedin.com/in/kirti-eppanapelli?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
               email="d2021.kirti.eppanapelli@ves.ac.in"
             />
             <Card
               name="Ashish Prakash Nair"
               role="Senior Technical Head"
               image={ashish}
-              instagram="https://instagram.com/krish"
-              linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Gaurang0311"
+              linkedin="https://www.linkedin.com/in/ashish-nair-a25843266?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               email="2021.ashish.nair@ves.ac.in"
             />
             <Card
               name="Nihit Mistry"
               role="Senior Technical Head"
               image={nihit}
-              instagram="https://instagram.com/krish"
-              linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Gaurang0311"
+              linkedin="http://www.linkedin.com/in/nihit-mistry-b31a1a271"
               email="2021.nihit.mistry@ves.ac.in"
             />
             <Card
               name="Aditri Vishwas"
               role=" Women in Engineering"
               image={aditri}
-              instagram="https://instagram.com/krish"
-              linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Gaurang0311"
+              linkedin="https://www.linkedin.com/in/aditri-vishwas-382780280"
+              github="https://github.com/aditri31"
               email="2021.aditri.vishwas@ves.ac.in"
             />
             </div>
