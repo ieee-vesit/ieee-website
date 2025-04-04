@@ -25,19 +25,30 @@ import shravan from "../assets/SECouncil/shravan.JPG";
 import sonali from "../assets/SECouncil/sonali.JPG";
 import Sudarsana_Krishnan from "../assets/SECouncil/Sudarsana_Krishnan.jpg";
 import akshit from "../assets/TEs/akshit.png";
-import anshi from "../assets/TEs/anshi.jpg";
+import Anshi from "../assets/TEs/Anshi.png";
 import Arnav from "../assets/TEs/Arnav.jpg";
 import ayush from "../assets/TEs/ayush.jpg";
 import Ishan from "../assets/TEs/Ishan.jpg";
 import Kshitij from "../assets/TEs/Kshitij.jpg";
 import maithili from "../assets/TEs/maithili.jpg";
 import piyush from "../assets/TEs/piyush.jpg";
-import pratham from "../assets/TEs/pratham.jpg";
-import Rakshit from "../assets/TEs/Rakshit.jpg";
+import pratham from "../assets/TEs/pratham.png";
+import Rakshit from "../assets/TEs/Rakshit.png";
 import Reet from "../assets/TEs/Reet.jpg";
 import Tanay from "../assets/TEs/Tanay.jpg";
 import veydant from "../assets/TEs/veydant.jpg";
-
+import ShantanuTE from "../assets/TEs/ShantanuTE.png"
+import anjali from "../assets/TEs/anjali.png"
+import anoushka from "../assets/BEs/anoushka.png"
+import ashish from "../assets/BEs/ashish.png"
+import gaurang from "../assets/BEs/gaurang.png"
+import rishika from "../assets/BEs/rishika.png"
+import nihit from "../assets/BEs/nihit.png"
+import kirti from "../assets/BEs/kirti.png"
+import kaushik from "../assets/BEs/kaushik.png";
+import sneha from "../assets/BEs/sneha.png";
+import aditri from "../assets/BEs/aditri.png";
+import aditiTE from "../assets/TEs/aditiTE.png"
 
 const CurrentCouncil = () => {
   return (
@@ -51,7 +62,7 @@ const CurrentCouncil = () => {
             <Card
               name="Gaurang Pramod Rane"
               role="Chairperson"
-              image={img1}
+              image={gaurang}
               instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               github="https://github.com/Gaurang0311"
@@ -60,7 +71,7 @@ const CurrentCouncil = () => {
             <Card
               name="Anoushka Menon"
               role="Chief Executive Officer"
-              image={img1}
+              image={anoushka}
               instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               github="https://github.com/Gaurang0311"
@@ -68,14 +79,13 @@ const CurrentCouncil = () => {
             />
             </div>
             </div>
-
             <div className="w-full mx-auto px-4 flex flex-col items-center my-8">
           <h3 className="uppercase my-8">senior council</h3>
           <div className="w-full flex flex-row flex-wrap justify-center items-center gap-8">
             <Card
               name="Gaurang Pramod Rane"
               role="Chairperson"
-              image={img1}
+              image={gaurang}
               instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               github="https://github.com/Gaurang0311"
@@ -84,7 +94,7 @@ const CurrentCouncil = () => {
             <Card
               name="Anoushka Menon"
               role="Chief Executive Officer"
-              image={img1}
+              image={anoushka}
               instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               github="https://github.com/Gaurang0311"
@@ -93,7 +103,7 @@ const CurrentCouncil = () => {
             <Card
               name="Kaushik Puli"
               role="Senior Public Relations Head"
-              image={img1}
+              image={kaushik}
               instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               github="https://github.com/Gaurang0311"
@@ -102,7 +112,7 @@ const CurrentCouncil = () => {
             <Card
               name="Rishika Chaubal"
               role="Senior Graphics Head"
-              image={img1}
+              image={rishika}
               instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               github="https://github.com/Gaurang0311"
@@ -120,7 +130,7 @@ const CurrentCouncil = () => {
             <Card
               name="Sneha Ramesh Sumbe"
               role="Senior Web Editor"
-              image={img1}
+              image={sneha}
               instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               github="https://github.com/Gaurang0311"
@@ -129,7 +139,7 @@ const CurrentCouncil = () => {
             <Card
               name="Kirti Srinivas Eppanapelli"
               role="Senior Editor"
-              image={img1}
+              image={kirti}
               instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               github="https://github.com/Gaurang0311"
@@ -138,7 +148,7 @@ const CurrentCouncil = () => {
             <Card
               name="Ashish Prakash Nair"
               role="Senior Technical Head"
-              image={img1}
+              image={ashish}
               instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               github="https://github.com/Gaurang0311"
@@ -147,7 +157,7 @@ const CurrentCouncil = () => {
             <Card
               name="Nihit Mistry"
               role="Senior Technical Head"
-              image={img1}
+              image={nihit}
               instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               github="https://github.com/Gaurang0311"
@@ -156,7 +166,7 @@ const CurrentCouncil = () => {
             <Card
               name="Aditri Vishwas"
               role=" Women in Engineering"
-              image={img1}
+              image={aditri}
               instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               github="https://github.com/Gaurang0311"
@@ -204,18 +214,10 @@ const CurrentCouncil = () => {
             <Card
               name="Anshi Tiwari"
               role="Jr. PR Head"
-              image={anshi}
+              image={Anshi}
               linkedin="https://www.linkedin.com/in/anshi-tiwari-b4a6642a7/"
               github="https://github.com/anshi1108"
               email="2022.anshi.tiwari@ves.ac.in"
-            />
-            <Card
-              name="Maithili Latey"
-              role="Jr. Graphics Head"
-              image={maithili}
-              instagram="https://instagram.com/krish"
-              linkedin="http://www.linkedin.com/in/maithili-latey-a8b645249"
-              email="2022.maithili.latey@ves.ac.in"
             />
             <Card
               name="Akshit Ramrane"
@@ -226,9 +228,18 @@ const CurrentCouncil = () => {
               email="2022.akshit.ramrane@ves.ac.in"
             />
             <Card
+              name="Maithili Latey"
+              role="Jr. Graphics Head"
+              image={maithili}
+              instagram="https://instagram.com/krish"
+              linkedin="http://www.linkedin.com/in/maithili-latey-a8b645249"
+              email="2022.maithili.latey@ves.ac.in"
+            />
+            
+            <Card
               name="Anjali Thakrani"
               role="Jr. Web Editor"
-              image={img1}
+              image={anjali}
               instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/anjali-thakrani"
               github="https://github.com/anjalithakrani"
@@ -253,7 +264,7 @@ const CurrentCouncil = () => {
             <Card
               name="Shantanu Bhosale"
               role="Jr. Technical Head"
-              image={img1}
+              image={ShantanuTE}
               linkedin="https://www.linkedin.com/in/shantanu-bhosale-b37839220/"
               github="https://github.com/JANGJONWOO"
               email="2022.shantanu.bhosale@ves.ac.in"
@@ -261,7 +272,7 @@ const CurrentCouncil = () => {
             <Card
               name="Aditi Dubey"
               role="Jr. Technical Head"
-              image={img1}
+              image={aditiTE}
               github="https://github.com/Unyc1124"
               email="2022.aditi.dubey@ves.ac.in"
             />
