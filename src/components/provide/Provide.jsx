@@ -10,7 +10,7 @@ import "./Provide.css";
 export default function Provide() {
   return (
     <div className="provide">
-      <h3 className="provideTitle">What we Provide ?</h3>
+      <h2 className="text-center my-8 uppercase">What we Provide ?</h2>
       <div className="provideContainer">
         <Card
           title={
