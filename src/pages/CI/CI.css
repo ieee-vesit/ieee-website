@@ -45,9 +45,8 @@
   }
   
   .hero-image img {
-    max-width: 100%;
+    width: 30rem;
     height: auto;
-    max-height: 250px;
   }
   
   /* Common Section Styles */

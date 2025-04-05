@@ -1,61 +1,62 @@
 import { useState } from "react";
 import { FaChevronDown, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
-import img1 from "../../assets/photo.jpeg";
+import greshaMam from "../../assets/faculty/Gresha ma'am.png"
+import ashwiniMam from "../../assets/faculty/Ashwini ma'am.png"
+import anoushka from "../../assets/BEs/anoushka.png"
+import gaurang from "../../assets/BEs/gaurang.png"
+import Ishan from "../../assets/TEs/Ishan.jpg";
+import veydant from "../../assets/TEs/veydant.jpg";
 
 const teamMembers = [
   {
     name: "Dr. Gresha Bhatia",
     role: "Deupty Head of Department - Computer Engineering",
-    email: "gresha@example.com",
-    linkedin: "https://www.linkedin.com/in/gresha",
-    github: "https://github.com/gresha",
+    email: "gresha.bhatia@ves.ac.in",
     bgColor: "--color1",
-    img: img1,
+    img: greshaMam,
   },
   {
     name: "Dr. Ashwini Sawant",
     role: "assistant Professor - Electronics and Telecommunication Engineering",
-    email: "ashwini@example.com",
-    linkedin: "https://www.linkedin.com/in/ashwini",
-    github: "https://github.com/ashwini",
+    email: "ashwini.sawant@ves.ac.in",
     bgColor: "--color2",
-    img: img1,
+    img: ashwiniMam,
   },
   {
     name: "Gaurang Rane",
     role: "Chairperson",
-    email: "gaurang@example.com",
+    email: "2021.gaurang.rane@ves.ac.in",
     linkedin: "https://www.linkedin.com/in/gaurang",
     github: "https://github.com/gaurang",
     bgColor: "--color1",
-    img: img1,
+    img: gaurang,
   },
   {
     name: "Anoushka Menon",
     role: "Chief Executive Officer",
-    email: "anoushka@example.com",
+    email: "2021.anoushka.menon@ves.ac.in",
     linkedin: "https://www.linkedin.com/in/anoushka",
     github: "https://github.com/anoushka",
     bgColor: "--color2",
-    img: img1,
+    img: anoushka,
   },
   {
     name: "Veydant Sharma",
     role: "Secretary",
-    email: "veydant@example.com",
+    email: "2022.veydant.sharma@ves.ac.in",
     linkedin: "https://www.linkedin.com/in/veydant",
     github: "https://github.com/veydant",
     bgColor: "--color1",
-    img: img1,
+    img: veydant,
   },
   {
     name: "Ishan Joshi",
     role: "Managing Executive Officer",
-    email: "ishan@example.com",
+    email: "2022.ishan.joshi@ves.ac.in",
     linkedin: "https://www.linkedin.com/in/ishan",
     github: "https://github.com/ishan",
     bgColor: "--color2",
-    img: img1,
+    img: Ishan,
   },
 ];
 
@@ -118,7 +119,7 @@ export default function Forms() {
               onClick={() => setActiveIndex(activeIndex === index ? null : index)}
             >
               <div className="flex items-center space-x-3">
-                <img src={member.img} alt={member.name} className="w-12 h-12 rounded-full" />
+                <img src={member.img} alt={member.name} className="w-12 h-12 rounded-full"  style={{objectFit:"cover"}}/>
                 <p>{member.name}</p>
               </div>
               <FaChevronDown
