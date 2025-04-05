@@ -1,10 +1,17 @@
 import React from 'react';
 import EventDescription from '../../components/Event_description/EventDescription';
 import machineMindsImage from '../../assets/Machineminds.png';
+import { useNavigate } from 'react-router-dom';
 
 const MachineMinds = () => {
+  const navigate = useNavigate();
   return (
     <div className='mt-16'>
+      <button 
+        onClick={() => navigate(-1)} 
+        className="ml-4 mb-4 mt-5 px-4 py-2 bg-gray-200 text-black rounded hover:bg-gray-300 transition duration-200"
+      >
+        ←</button>
       <EventDescription 
         title="Machine Minds"
         subtitle="Exploring AI & ML Fundamentals"

@@ -84,7 +84,7 @@ const Navbar = () => {
               <i className={`bx bxs-chevron-down arrow ${activeDropdown === "societies" ? "rotate" : ""}`}></i>
               <ul className={`sub-menu ${activeDropdown === "societies" ? "show" : ""}`}>
                 <Link to="/societies/wie" onClick={closeSidebar}><li><a href="#" className="uppercase">Women In Engineering</a></li></Link>
-                <li><a href="#" className="uppercase" onClick={closeSidebar}>Computer Society</a></li>
+                <Link to="/societies/ci" onClick={closeSidebar}><li><a href="#" className="uppercase">Computational Intelligence</a></li></Link>
                 {/* <li><a href="#" className="uppercase" onClick={closeSidebar}>Papers</a></li> */}
                 {/* <li><a href="#" className="uppercase" onClick={closeSidebar}>Magazines</a></li> */}
               </ul>
@@ -103,7 +103,7 @@ const Navbar = () => {
               <a href="#" onClick={() => toggleDropdown("events")}>EVENTS</a>
               <i className={`bx bxs-chevron-down arrow ${activeDropdown === "events" ? "rotate" : ""}`}></i>
               <ul className={`sub-menu ${activeDropdown === "events" ? "show" : ""}`}>
-                <Link to="/vesit_tank" onClick={closeSidebar}><li><a href="#" className="uppercase">Upcoming</a></li></Link>
+                <Link to="/calendar" onClick={closeSidebar}><li><a href="#" className="uppercase">Upcoming</a></li></Link>
                 <Link to="/events" onClick={closeSidebar}><li><a href="#" className="uppercase">Past</a></li></Link>
                 {/* <li><a href="#" className="uppercase" onClick={closeSidebar}>Papers</a></li> */}
                 {/* <li><a href="#" className="uppercase" onClick={closeSidebar}>Magazines</a></li> */}

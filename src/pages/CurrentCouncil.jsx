@@ -49,6 +49,8 @@ import kaushik from "../assets/BEs/kaushik.png";
 import sneha from "../assets/BEs/sneha.png";
 import aditri from "../assets/BEs/aditri.png";
 import aditiTE from "../assets/TEs/aditiTE.png"
+import greshaMam from "../assets/faculty/Gresha ma'am.png"
+import ashwiniMam from "../assets/faculty/Ashwini ma'am.png"
 
 const CurrentCouncil = () => {
   return (
@@ -60,20 +62,16 @@ const CurrentCouncil = () => {
           <div className="w-full flex flex-row flex-wrap justify-center items-center gap-8">
             {" "}
             <Card
-              name="Gaurang Pramod Rane"
-              role="Chairperson"
-              image={gaurang}
-              linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Gaurang0311"
-              email="2021.gaurang.rane@ves.ac.in"
+              name="Dr. Gresha Bhatia"
+              role="Deputy HOD - Computer"
+              image={greshaMam}
+              email="gresha.bhatia@ves.ac.in"
             />
             <Card
-              name="Anoushka Menon"
-              role="Chief Executive Officer"
-              image={anoushka}
-              linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/anoushkamenon15"
-              email="2021.anoushka.menon@ves.ac.in "
+              name="Dr. Ashwini Sawant"
+              role="Assistant Professor - EXTC"
+              image={ashwiniMam}
+              email="ashwini.sawant@ves.ac.in"
             />
             </div>
             </div>

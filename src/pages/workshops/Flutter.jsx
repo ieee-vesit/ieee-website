@@ -1,10 +1,17 @@
 import React from 'react';
 import EventDescription from '../../components/Event_description/EventDescription';
 import flutterWorkshopImage from '../../assets/Flutter.png';
+import { useNavigate } from 'react-router-dom';
 
-const FlutterWorkshop = () => {
+const Flutter = () => {
+  const navigate = useNavigate();
   return (
     <div className='mt-16'>
+      <button 
+        onClick={() => navigate(-1)} 
+        className="ml-4 mb-4 mt-5 px-4 py-2 bg-gray-200 text-black rounded hover:bg-gray-300 transition duration-200"
+      >
+        ←</button>
       <EventDescription 
         title="Flutter Workshop"
         subtitle="Building AI-Powered Apps with Flutter"
@@ -22,4 +29,4 @@ const FlutterWorkshop = () => {
   );
 };
 
-export default FlutterWorkshop;
+export default Flutter;

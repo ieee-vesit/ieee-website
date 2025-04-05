@@ -116,3 +116,18 @@
     padding: 20px 15px;
   }
 }
+
+.month-nav-btn {
+  background-color: var(--white);
+  border: 1px solid var(--black);
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.month-nav-btn:hover {
+  background-color: var(--black);
+  color: var(--white);
+}
