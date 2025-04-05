@@ -4,7 +4,10 @@ import './Header.css';
 import img1 from '../../assets/maam.jpg';
 import img2 from '../../assets/head.png';
 import img3 from '../../assets/ml.jpg';
-import img4 from '../../assets/council.png';
+import img4 from '../../assets/GroupPhoto.jpg'
+import img5 from '../../assets/ml2.jpg';
+import img6 from '../../assets/uiux.jpg'
+import img7 from '../../assets/council.jpg';
 
 const Header = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -12,17 +15,19 @@ const Header = () => {
   const sliderListRef = useRef(null);
   const sliderItemsRef = useRef([]);
 
-  // Slide data
   const slides = [
     { img: img1, title: 'MAGIC SLIDER', type: 'FLOWER', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...' },
     { img: img2, title: 'MAGIC SLIDER', type: 'NATURE', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...' },
     { img: img3, title: 'MAGIC SLIDER', type: 'NATURE', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...' },
-    { img: img4, title: 'MAGIC SLIDER', type: 'PLANT', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...' },
+    { img: img4, title: 'MAGIC SLIDER', type: 'NATURE', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...' },
+    { img: img5, title: 'MAGIC SLIDER', type: 'PLANT', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...' },
+    { img: img6, title: 'MAGIC SLIDER', type: 'PLANT', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...' },
+    { img: img7, title: 'MAGIC SLIDER', type: 'PLANT', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...' },
   ];
 
-  // Function for next and previous buttons
   const moveSlider = (direction) => {
     const items = sliderItemsRef.current;
+    if (!items || items.length === 0) return;
 
     if (direction === 'next') {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -34,12 +39,10 @@ const Header = () => {
   };
 
   useEffect(() => {
-    // Initialize slider item refs
     sliderItemsRef.current = sliderListRef.current.querySelectorAll('.item');
   }, [slides]);
 
   useEffect(() => {
-    // Adding event listener for animation end
     const slider = sliderRef.current;
     const onAnimationEnd = () => {
       slider.classList.remove('next', 'prev');
@@ -49,6 +52,14 @@ const Header = () => {
     return () => {
       slider.removeEventListener('animationend', onAnimationEnd);
     };
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      moveSlider('next');
+    }, 8000); // 5000ms = 5 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
   }, []);
 
   return (
