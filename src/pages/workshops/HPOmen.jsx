@@ -1,10 +1,17 @@
 import React from 'react';
 import EventDescription from '../../components/Event_description/EventDescription';
 import eventImage from '../../assets/event.png';
+import { useNavigate } from 'react-router-dom';
 
-const HpOmenWorkshop = () => {
+const HpOmen = () => {
+  const navigate = useNavigate();
   return (
     <div className='mt-16'>
+      <button 
+        onClick={() => navigate(-1)} 
+        className="ml-4 mb-4 mt-5 px-4 py-2 bg-gray-200 text-black rounded hover:bg-gray-300 transition duration-200"
+      >
+        ←</button>
       <EventDescription 
         title="HP OMEN Workshop"
         subtitle="IEEE-VESIT x HP Omen Special Event"
@@ -16,4 +23,4 @@ const HpOmenWorkshop = () => {
   );
 };
 
-export default HpOmenWorkshop;
+export default HpOmen;

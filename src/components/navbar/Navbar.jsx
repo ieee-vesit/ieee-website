@@ -103,7 +103,7 @@ const Navbar = () => {
               <a href="#" onClick={() => toggleDropdown("events")}>EVENTS</a>
               <i className={`bx bxs-chevron-down arrow ${activeDropdown === "events" ? "rotate" : ""}`}></i>
               <ul className={`sub-menu ${activeDropdown === "events" ? "show" : ""}`}>
-                <Link to="/vesit_tank" onClick={closeSidebar}><li><a href="#" className="uppercase">Upcoming</a></li></Link>
+                <Link to="/calendar" onClick={closeSidebar}><li><a href="#" className="uppercase">Upcoming</a></li></Link>
                 <Link to="/events" onClick={closeSidebar}><li><a href="#" className="uppercase">Past</a></li></Link>
                 {/* <li><a href="#" className="uppercase" onClick={closeSidebar}>Papers</a></li> */}
                 {/* <li><a href="#" className="uppercase" onClick={closeSidebar}>Magazines</a></li> */}
