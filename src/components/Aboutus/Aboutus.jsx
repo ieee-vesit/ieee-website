@@ -52,19 +52,8 @@ const Aboutus = () => {
 
       <div className="para3">
         <div className="p3">
-          IEEE stands for Institute of Electrical and Electronics Engineers.
-          Here at IEEE-VESIT, we conduct many technical workshops as well as fun
-          events and seminars, maintaining the balance between academics and
-          co-curricular activities. Being the perfect blend of hardware and
-          software, IEEE-VESIT covers a huge cloud of domains in which students
-          can build their career. The faculty and student council works
-          hand-in-hand and the legacy is carried forward. IEEE-VESIT also boasts
-          about international membership which allows students to get guidance
-          right from selecting the topic to write a research paper on until the
-          paper is published in the international IEEE magazines. IEEE-VESIT is
-          one umbrella society that you require in your engineering life! Be it
-          workshops, seminars, fun events, placements, masters, technical paper
-          presentations, etc, IEEE-VESIT has it all!
+        At IEEE-VESIT we aim at fostering both technical excellence and vibrant student engagement. From cutting-edge workshops and seminars to fun, enriching events, we ensure a perfect balance between academics and co-curriculars.
+        Backed by international IEEE membership, students gain global exposure — from writing research papers to getting published. Whether it’s placements, higher studies, or hands-on learning, IEEE-VESIT is your one-stop society for it all.
         </div>
         <div className="pic3">
           <img src={img3} />
