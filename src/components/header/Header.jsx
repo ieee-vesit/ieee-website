@@ -7,7 +7,7 @@ import img3 from '../../assets/ml.jpg';
 import img4 from '../../assets/GroupPhoto.jpg'
 import img5 from '../../assets/ml2.jpg';
 import img6 from '../../assets/uiux.jpg'
-import img7 from '../../assets/council.jpg';
+import img7 from '../../assets/council.png';
 
 const Header = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
