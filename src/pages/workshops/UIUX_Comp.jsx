@@ -5,6 +5,11 @@ import uiuxImage from '../../assets/UIUX.png';
 const UIUXCompetition = () => {
   return (
     <div className='mt-16'>
+      <button 
+        onClick={() => navigate(-1)} 
+        className="ml-4 mb-4 mt-5 px-4 py-2 bg-gray-200 text-black rounded hover:bg-gray-300 transition duration-200"
+      >
+        ←</button>
       <EventDescription 
         title="UI/UX Competition"
         subtitle="Turning Design Skills into Reality"

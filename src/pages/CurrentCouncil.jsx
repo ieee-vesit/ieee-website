@@ -82,18 +82,18 @@ const CurrentCouncil = () => {
               name="Gaurang Pramod Rane"
               role="Chairperson"
               image={gaurang}
-              instagram="https://instagram.com/krish"
+              // instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/gaurang-rane-a45335245?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Gaurang0311"
+              // github="https://github.com/Gaurang0311"
               email="2021.gaurang.rane@ves.ac.in"
             />
             <Card
               name="Anoushka Menon"
               role="Chief Executive Officer"
               image={anoushka}
-              instagram="https://instagram.com/krish"
+              // instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/anoushka-menon-5b2ab5260/"
-              github="https://github.com/Gaurang0311"
+              // github="https://github.com/Gaurang0311"
               email="2021.anoushka.menon@ves.ac.in "
             />
             <Card
@@ -150,7 +150,7 @@ const CurrentCouncil = () => {
               role=" Women in Engineering"
               image={aditri}
               linkedin="https://www.linkedin.com/in/aditri-vishwas-382780280"
-              github="https://github.com/aditri31"
+              // github="https://github.com/aditri31"
               email="2021.aditri.vishwas@ves.ac.in"
             />
             </div>
@@ -166,7 +166,7 @@ const CurrentCouncil = () => {
               role="Secretary"
               image={veydant}
               linkedin="https://www.linkedin.com/in/veydant-sharma-122339243?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/vey-droid"
+              // github="https://github.com/vey-droid"
               email="2022.veydant.sharma@ves.ac.in"
             />
             <Card
@@ -174,7 +174,7 @@ const CurrentCouncil = () => {
               role="Managing Executive Officer"
               image={Ishan}
               linkedin="https://www.linkedin.com/in/ishan-joshi-3677042a7/"
-              github="https://github.com/Ishan2611"
+              // github="https://github.com/Ishan2611"
               email="2022.ishan.joshi@ves.ac.in"
             />
             <Card
@@ -182,7 +182,7 @@ const CurrentCouncil = () => {
               role="Jr. Treasurer"
               image={Kshitij}
               linkedin="https://www.linkedin.com/in/kshitijpatki/"
-              github="https://github.com/Kush1612"
+              // github="https://github.com/Kush1612"
               email="2022.kshitij.patki@ves.ac.in "
             />
             <Card
@@ -197,7 +197,7 @@ const CurrentCouncil = () => {
               role="Jr. PR Head"
               image={Anshi}
               linkedin="https://www.linkedin.com/in/anshi-tiwari-b4a6642a7/"
-              github="https://github.com/anshi1108"
+              // github="https://github.com/anshi1108"
               email="2022.anshi.tiwari@ves.ac.in"
             />
             <Card
@@ -205,14 +205,14 @@ const CurrentCouncil = () => {
               role="Jr. Graphics Head"
               image={akshit}
               linkedin="https://www.linkedin.com/in/akshit-ramrane-b1980825b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Akshit-Ramrane"
+              // github="https://github.com/Akshit-Ramrane"
               email="2022.akshit.ramrane@ves.ac.in"
             />
             <Card
               name="Maithili Latey"
               role="Jr. Graphics Head"
               image={maithili}
-              instagram="https://instagram.com/krish"
+              // instagram="https://instagram.com/krish"
               linkedin="http://www.linkedin.com/in/maithili-latey-a8b645249"
               email="2022.maithili.latey@ves.ac.in"
             />
@@ -221,9 +221,9 @@ const CurrentCouncil = () => {
               name="Anjali Thakrani"
               role="Jr. Web Editor"
               image={anjali}
-              instagram="https://instagram.com/krish"
+              // instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/anjali-thakrani"
-              github="https://github.com/anjalithakrani"
+              // github="https://github.com/anjalithakrani"
               email="2022.anjali.thakrani@ves.ac.in"
             />
             <Card
@@ -231,7 +231,7 @@ const CurrentCouncil = () => {
               role="Jr. Web Editor"
               image={pratham}
               linkedin="https://www.linkedin.com/in/pratham-matkar-a2bb77257/"
-              github="https://github.com/prathamm2506"
+              // github="https://github.com/prathamm2506"
               email="d2022.pratham.matkar@ves.ac.in"
             />
             <Card
@@ -239,7 +239,7 @@ const CurrentCouncil = () => {
               role="Jr. Web Editor"
               image={Rakshit}
               linkedin="https://www.linkedin.com/in/rakshit-kumar-sharma-5b25942ab/"
-              github="https://github.com/Rakshit5467"
+              // github="https://github.com/Rakshit5467"
               email="2022.rakshit.sharma@ves.ac.in"
             />
             <Card
@@ -247,14 +247,14 @@ const CurrentCouncil = () => {
               role="Jr. Technical Head"
               image={ShantanuTE}
               linkedin="https://www.linkedin.com/in/shantanu-bhosale-b37839220/"
-              github="https://github.com/JANGJONWOO"
+              // github="https://github.com/JANGJONWOO"
               email="2022.shantanu.bhosale@ves.ac.in"
             />
             <Card
               name="Aditi Dubey"
               role="Jr. Technical Head"
               image={aditiTE}
-              github="https://github.com/Unyc1124"
+              // github="https://github.com/Unyc1124"
               email="2022.aditi.dubey@ves.ac.in"
             />
             <Card
@@ -262,7 +262,7 @@ const CurrentCouncil = () => {
               role="Jr. Technical Head"
               image={Arnav}
               linkedin="https://www.linkedin.com/in/arnavsawant9/"
-              github="https://github.com/arnavsawant9"
+              // github="https://github.com/arnavsawant9"
               email="2022.arnav.sawant@ves.ac.in"
             />
             <Card
@@ -270,7 +270,7 @@ const CurrentCouncil = () => {
               role="Jr. Technical Head"
               image={piyush}
               linkedin="http://www.linkedin.com/in/piyush-pandey-09348b317"
-              github="https://github.com/itspandey22"
+              // github="https://github.com/itspandey22"
               email="2022.piyush.pandey@ves.ac.in"
             />
             <Card
@@ -286,15 +286,15 @@ const CurrentCouncil = () => {
               linkedin="https://www.linkedin.com/in/tanay-baisware-21ab5b24b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
               email="2022.tanay.baisware@ves.ac.in"
             />
-            <Card
+            {/* <Card
               name="Harsh Shah"
               role="Jr PR Incharge"
               image={img1}
-              instagram="https://instagram.com/krish"
+              // instagram="https://instagram.com/krish"
               linkedin="https://www.linkedin.com/in/pratham-matkar-a2bb77257/"
-              github="https://github.com/prathamm2506"
+              // github="https://github.com/prathamm2506"
               email="2022.harsh.shah@ves.ac.in"
-            />
+            /> */}
             </div>
             </div>
 
@@ -308,7 +308,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={Krish}
               linkedin="https://www.linkedin.com/in/krish-dambir-1701a2289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/krishgit24"
+              // github="https://github.com/krishgit24"
               email="krishdambir2718@gmail.com"
             />
             <Card
@@ -316,7 +316,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={sanket}
               linkedin="https://www.linkedin.com/in/sanket-patil1708/"
-              github="https://github.com/sanketp17"
+              // github="https://github.com/sanketp17"
               email="sanketpatil0902@gmail.com"
             />
             <Card
@@ -324,7 +324,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={nafeesa}
               linkedin="https://in.linkedin.com/in/nafeesa-memon-15884b284"
-              github="https://github.com/nafeesa46"
+              // github="https://github.com/nafeesa46"
               email="nafeesa07memon@gmail.com"
             />
             <Card
@@ -332,7 +332,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={naman}
               linkedin="https://www.linkedin.com/in/naman-varma-311b8134b/"
-              github="https://github.com/namanvarma21"
+              // github="https://github.com/namanvarma21"
               email="namanvarma2005@gmail.com"
             />
             <Card
@@ -340,7 +340,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={amogh}
               linkedin="https://www.linkedin.com/in/amogh-more-2a1066298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Amoghmore1409"
+              // github="https://github.com/Amoghmore1409"
               email="amoghmore1409@gmail.com"
             />
             <Card
@@ -348,7 +348,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={Shantanu}
               linkedin="https://www.linkedin.com/in/shantanu-pawar-4b05a5316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Shantanupawar29"
+              // github="https://github.com/Shantanupawar29"
               email="shantanupawar2005@gmail.com"
             />
             <Card
@@ -356,7 +356,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={Anushka}
               linkedin="https://www.linkedin.com/in/anushka-sharma-0543832a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Anu-shhkaa"
+              // github="https://github.com/Anu-shhkaa"
               email="anushka.5aas@gmail.com"
             />
             <Card
@@ -364,7 +364,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={Udayan}
               linkedin="https://in.linkedin.com/in/udayan-kundu-3a9931248"
-              github="https://github.com/UdayanKundu222"
+              // github="https://github.com/UdayanKundu222"
               email="udayankundu222@gmail.com"
             />
             <Card
@@ -372,7 +372,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={samarth}
               linkedin="https://www.linkedin.com/in/samarth-adsare-564a6229b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/Samarth-Ad"
+              // github="https://github.com/Samarth-Ad"
               email="samarthad950@mail.com"
             />
             <Card
@@ -380,7 +380,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={Harsh}
               linkedin="https://www.linkedin.com/in/harsh-patil-8b001630b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/HarshP295"
+              // github="https://github.com/HarshP295"
               email="harsh.patilin2005@gmail.com"
             />
             <Card
@@ -388,7 +388,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={Unnati}
               linkedin="http://linkedin.com/in/unnati-s-6310b32a1"
-              github="https://github.com/unnss18"
+              // github="https://github.com/unnss18"
               email="unnatishresth248@gmail.com"
             />
             <Card
@@ -396,7 +396,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={Bhavik}
               linkedin="https://www.linkedin.com/in/bhavik-panjapi-259b772a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/BhavikPanjapi"
+              // github="https://github.com/BhavikPanjapi"
               email="panjapibhavik77@gmail.com"
             />
             <Card
@@ -404,7 +404,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={rajat}
               linkedin="http://www.linkedin.com/in/rajat-saha-90877a301"
-              github="https://github.com/PikaPi1402"
+              // github="https://github.com/PikaPi1402"
               email="rajatsaha1402@gmail.com"
             />
             <Card
@@ -412,7 +412,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={Vaidehi}
               linkedin="https://www.linkedin.com/in/vaidehi-setiya-2879b834b/"
-              github="https://github.com/Mahekkawna"
+              // github="https://github.com/Mahekkawna"
               email="vaidehisetiya09@gmail.com"
             />
             <Card
@@ -420,7 +420,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={Mahek}
               linkedin="https://www.linkedin.com/in/mahek-kawna-73530728b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/vaidehi1603"
+              // github="https://github.com/vaidehi1603"
               email="2023.mahek.kawna@ves.ac.in"
             />
             <Card
@@ -428,7 +428,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={sonali}
               linkedin="https://www.linkedin.com/in/sonali-parishwad-124a0934b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/sonali2905"
+              // github="https://github.com/sonali2905"
               email="2023.sonali.parishwad@ves.ac.in"
             />
             <Card
@@ -436,7 +436,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={prasad}
               linkedin="https://www.linkedin.com/me?trk=p_mwlite_feed-secondary_nav"
-              github="https://github.com/jerry4699"
+              // github="https://github.com/jerry4699"
               email="d2023.prasad.rane@ves.ac.in"
             />
             <Card
@@ -444,7 +444,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={Faiza}
               linkedin="https://www.linkedin.com/in/faiza-shaikh-aa6677274?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/faiza231"
+              // github="https://github.com/faiza231"
               email="d2023.faiza.shaikh@ves.ac.in"
             />
             <Card
@@ -452,7 +452,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={diya}
               linkedin="https://www.linkedin.com/in/diya-nagdev-b79821346?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-              github="https://github.com/diyanagdev09"
+              // github="https://github.com/diyanagdev09"
               email="2023.diya.nagdev@ves.ac.in"
             />
             <Card
@@ -467,7 +467,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={aditi}
               linkedin="https://www.linkedin.com/in/aditi-panigrahi-5bb86228b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              github="https://github.com/aditipanigrahi20"
+              // github="https://github.com/aditipanigrahi20"
               email="2023.aditi.panigrahi@ves.ac.in"
             />
             <Card
@@ -475,7 +475,7 @@ const CurrentCouncil = () => {
               role="S.E. Coordinator"
               image={Sudarsana_Krishnan}
               linkedin="https://www.linkedin.com/in/sudarsana-krishnan-4773a9346/overlay/about-this-profile/?lipi=urn:li:page:d_flagship3_profile_view_base;t6u9l7BlR8%20YZ6yiYW6suw=="
-              github="https://github.com/SudarsanaKrishnan"
+              // github="https://github.com/SudarsanaKrishnan"
               email="2023.krishnan.sudarsana@ves.ac.in"
             />
             <Card

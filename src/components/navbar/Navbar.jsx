@@ -73,7 +73,7 @@ const Navbar = () => {
               <i className={`bx bxs-chevron-down arrow ${activeDropdown === "ieee" ? "rotate" : ""}`}></i>
               <ul className={`sub-menu ${activeDropdown === "ieee" ? "show" : ""}`}>
                 <li><a href="https://ieeexplore.ieee.org/Xplore/home.jsp" className="uppercase" target="_blank">IEEE Xplore digital library</a></li>
-                <li><a href="https://standards.ieee.org/standard/" className="uppercase" target="_blank" onClick={closeSidebar}>ieee standards</a></li>
+                {/* <li><a href="https://standards.ieee.org/standard/" className="uppercase" target="_blank" onClick={closeSidebar}>ieee standards</a></li> */}
                 <li><a href="https://spectrum.ieee.org/" className="uppercase" target="_blank" onClick={closeSidebar}>ieee spectrum</a></li>
                 {/* <li><a href="#" className="uppercase" onClick={closeSidebar}>Magazines</a></li> */}
               </ul>
@@ -95,7 +95,7 @@ const Navbar = () => {
               <i className={`bx bxs-chevron-down arrow ${activeDropdown === "council" ? "rotate" : ""}`}></i>
               <ul className={`sub-menu ${activeDropdown === "council" ? "show" : ""}`}>
                 <Link to="/current_council" onClick={closeSidebar}><li><a href="#" className="uppercase">Year (24-25)</a></li></Link>
-                <Link to="/council23-24" onClick={closeSidebar}><li><a href="#" className="uppercase" onClick={closeSidebar}>Year (23-24)</a></li></Link>
+                {/* <Link to="/council23-24" onClick={closeSidebar}><li><a href="#" className="uppercase" onClick={closeSidebar}>Year (23-24)</a></li></Link> */}
               </ul>
             </li>
 
@@ -103,7 +103,7 @@ const Navbar = () => {
               <a href="#" onClick={() => toggleDropdown("events")}>EVENTS</a>
               <i className={`bx bxs-chevron-down arrow ${activeDropdown === "events" ? "rotate" : ""}`}></i>
               <ul className={`sub-menu ${activeDropdown === "events" ? "show" : ""}`}>
-                <Link to="/calendar" onClick={closeSidebar}><li><a href="#" className="uppercase">Upcoming</a></li></Link>
+                <Link to="/melange" onClick={closeSidebar}><li><a href="#" className="uppercase">Upcoming</a></li></Link>
                 <Link to="/events" onClick={closeSidebar}><li><a href="#" className="uppercase">Past</a></li></Link>
                 {/* <li><a href="#" className="uppercase" onClick={closeSidebar}>Papers</a></li> */}
                 {/* <li><a href="#" className="uppercase" onClick={closeSidebar}>Magazines</a></li> */}
@@ -111,7 +111,7 @@ const Navbar = () => {
             </li>
             <Link to="/developers" onClick={closeSidebar}><li><a href="#" onClick={closeSidebar}>DEVELOPERS</a></li></Link>
             <Link to="/contact" onClick={closeSidebar}><li><a href="#" onClick={closeSidebar}>CONTACT</a></li></Link>
-            <Link to="/vesit_tank" onClick={closeSidebar}><li className="bg-[color:--color3] hover:!bg-[color:--white] duration-500"><a href="#" onClick={closeSidebar}><i class="fa-solid fa-arrow-pointer"></i> REGISTER</a></li></Link>
+            <Link to="/melange" onClick={closeSidebar}><li className="bg-[color:--color3] hover:!bg-[color:--white] duration-500"><a href="#" onClick={closeSidebar}><i class="fa-solid fa-arrow-pointer"></i> REGISTER</a></li></Link>
             <Link to="/join_ieee" onClick={closeSidebar}><li className="bg-[color:--color2] hover:!bg-[color:--white] duration-500"><a href="#" onClick={closeSidebar}><i class="fa-solid fa-hat-cowboy"></i> JOIN IEEE</a></li></Link>
           </ul>
         </div>

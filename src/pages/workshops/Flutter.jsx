@@ -15,7 +15,7 @@ const Flutter = () => {
       <EventDescription 
         title="Flutter Workshop"
         subtitle="Building AI-Powered Apps with Flutter"
-        date="December 16-17, 2024"
+        date="December 16-20, 2024"
         image={flutterWorkshopImage}
         description="IEEE-VESIT transformed classrooms into an innovation hub with its hands-on Flutter Workshop, equipping students with the skills to develop AI-driven, cloud-connected mobile apps. This two-day workshop provided a deep dive into Flutter’s powerful cross-platform capabilities.
 

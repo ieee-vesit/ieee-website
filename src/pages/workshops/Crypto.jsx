@@ -15,7 +15,7 @@ const CryptoChrome = () => {
       <EventDescription 
         title="CryptoChrome Workshop"
         subtitle="Exploring Chrome Extension Development & Crypto Integration"
-        date="Workshop Date Here"
+        date="13th August 2024"
         image={cryptoChromeImage}
         description="The CryptoChrome workshop provided students with a hands-on experience in Chrome extension development, API integration, and cryptocurrency applications. Designed to introduce participants to browser extension development, the workshop equipped them with the skills needed to create their own extensions while understanding how APIs enhance web applications.
 

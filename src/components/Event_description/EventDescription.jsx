@@ -1,7 +1,7 @@
 import React from "react";
 import "./Event_description.css";
 
-const EventDescription = ({ title, subtitle, date, image, description }) => {
+const EventDescription = ({ title, subtitle, date, image, description, linkform }) => {
   return (
     <div className="event">
       <div className="heads">
@@ -16,9 +16,9 @@ const EventDescription = ({ title, subtitle, date, image, description }) => {
 
       <button 
         className="w-max px-6 py-3 bg-[var(--color2)] mt-8 uppercase text-[var(--white)] transition-all duration-500 ease-in-out hover:bg-[var(--color1)] hover:text-[var(--black)]" 
-        style={{ fontSize: 'var(--p)' }}
+        style={{ fontSize: 'var(--p)' }} onClick={() => window.open(linkform, '_blank')}
       >
-        Register Now
+         Link
       </button>
     </div>
   );

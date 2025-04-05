@@ -28,6 +28,9 @@ import NexIoT from './pages/workshops/NexIoT.jsx';
 import PaperQuest from './pages/workshops/Paperquest.jsx';
 import UIUX from './pages/workshops/UIUX.jsx';
 import WealthWars from './pages/workshops/WealthWars.jsx';
+import Melange from './pages/workshops/Sympo.jsx';
+import UIUXCompetition from './pages/workshops/UIUX_Comp.jsx';
+import FinancialLiteracy from './pages/workshops/Finance.jsx';
 
 function App() {
   return (
@@ -57,6 +60,10 @@ function App() {
         <Route path="/paperquest" element={<PaperQuest />} />
         <Route path="/uiux" element={<UIUX />} />
         <Route path="/wealth_wars" element={<WealthWars />} />
+        <Route path="/melange" element={<Melange />} />
+        <Route path="/uiux_competition" element={<UIUXCompetition />} />
+        <Route path="/financial_literacy" element={<FinancialLiteracy />} />
+
       </Routes>
       <Footer />
     </Router>
