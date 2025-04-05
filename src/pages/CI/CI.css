@@ -1,0 +1,274 @@
+.ci-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Hero Section */
+  .ci-hero {
+    background: linear-gradient(135deg, #00629B 0%, #003B5C 100%);
+    color: white;
+    padding: 4rem 2rem;
+  }
+  
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .hero-text {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+  }
+  
+  .hero-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+  }
+  
+  /* Common Section Styles */
+  section {
+    padding: 4rem 2rem;
+  }
+  
+  section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #00629B;
+  }
+  
+  /* About Section */
+  .about-section {
+    background-color: #f9f9f9;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .about-content p {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Features Section */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-card h3 {
+    color: #00629B;
+    margin-bottom: 1rem;
+  }
+  
+  /* Activities Section */
+  .activity-cards {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .activity-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .activity-card.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .activity-card img {
+    flex: 1;
+    min-width: 300px;
+    border-radius: 8px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .activity-content {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .activity-content h3 {
+    color: #00629B;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Resources Section */
+  .resources-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .resource-card {
+    display: block;
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    padding-right: 3rem;
+  }
+  
+  .resource-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f0f7ff;
+  }
+  
+  .resource-card h3 {
+    color: #00629B;
+    margin-bottom: 0.5rem;
+  }
+  
+  .link-arrow {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #00629B;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .resource-card:hover .link-arrow {
+    opacity: 1;
+  }
+  
+  /* Membership CTA */
+  .membership-cta {
+    background: linear-gradient(135deg, #00629B 0%, #003B5C 100%);
+    color: white;
+    text-align: center;
+  }
+  
+  .membership-cta h2 {
+    color: white;
+  }
+  
+  .membership-cta p {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-button.primary {
+    background-color: white;
+    color: #00629B;
+  }
+  
+  .cta-button.primary:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+  }
+  
+  .cta-button.secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+  
+  .cta-button.secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .hero-content, .activity-card {
+      flex-direction: column;
+    }
+    
+    .hero-text, .hero-image {
+      text-align: center;
+      width: 100%;
+    }
+    
+    .activity-card.reverse {
+      flex-direction: column;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .cta-button {
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+    }
+  }
