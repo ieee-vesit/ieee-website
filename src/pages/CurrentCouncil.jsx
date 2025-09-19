@@ -1,33 +1,35 @@
 import React from "react";
 import Card from "../components/Card/Card";
-import Udayan from "../assets/SECouncil/Udayan.JPG.webp";
-import Unnati from "../assets/SECouncil/Unnati.webp";
-import Anushka from "../assets/SECouncil/Anushka.JPG.webp";
-import Harsh from "../assets/SECouncil/HarshPatil_.webp";
-import Krish from "../assets/SECouncil/KrishDambir.JPG.webp";
-import Mahek from "../assets/SECouncil/Mahek.JPG.webp";
-import nafeesa from "../assets/SECouncil/nafeesa.JPG.webp";
-import rajat from "../assets/SECouncil/rajat.JPG.webp";
-import samarth from "../assets/SECouncil/samarth.JPG.webp";
-import SarthakKadam from "../assets/SECouncil/SarthakKadam.JPG.webp";
-import sonali from "../assets/SECouncil/sonali.JPG.webp";
-import Sudarsana from "../assets/SECouncil/Sudarsana_Krishnan.webp";
+import Udayan from "../assets/BE25/Udayan.webp";
+import Unnati from "../assets/BE25/Unnati.webp";
+import Anushka from "../assets/BE25/Anushka.webp";
+import Harsh from "../assets/BE25/Harsh.webp";
+import krish from "../assets/BE25/Krish.png";
+import mahek from "../assets/BE25/Mahek.webp";
+import nafeesa from "../assets/BE25/Nafeesa.webp";
+import rajat from "../assets/BE25/Rajat.webp";
+import samarth from "../assets/BE25/Samarth.webp";
+import SarthakKadam from "../assets/BE25/Sarthak.webp";
+import sonali from "../assets/BE25/Sonali.webp";
+import Sudarsana from "../assets/BE25/Sudarsana.webp";
 import Anshi from "../assets/TEs/Anshi.webp";
-import Arnav from "../assets/TEs/Arnav.webp";
-import ayush from "../assets/TEs/ayush.webp";
-import Ishan from "../assets/TEs/Ishan.webp";
-import Kshitij from "../assets/TEs/Kshitij.webp";
-import pratham from "../assets/TEs/pratham.webp";
-import Rakshit from "../assets/TEs/Rakshit.webp";
-import Reet from "../assets/TEs/Reet.webp";
-import Tanay from "../assets/TEs/Tanay.webp";
+import Arnav from "../assets/BE25/Arnav.webp";
+import ayush from "../assets/BE25/Ayush.webp";
+import Ishan from "../assets/BE25/Ishan.webp";
+import Kshitij from "../assets/BE25/Kshitij.webp";
+import pratham from "../assets/BE25/Pratham.webp";
+import Rakshit from "../assets/BE25/Rakshit.webp";
+import Reet from "../assets/BE25/Reet.webp";
+import Tanay from "../assets/BE25/Tanay.webp";
 import greshaMam from "../assets/faculty/Gresha ma'am.webp"
 import ashwiniMam from "../assets/faculty/Ashwini ma'am.webp"
-import Akshit from "../assets/TEs/Akshit.webp"
+import Akshit from "../assets/BE25/Akshit.webp"
 import Nidhi from "../assets/BE25/Nidhi.webp"
 import Shreshtha from "../assets/BE25/Shreshtha.webp"
 import Purva from "../assets/BE25/Purva.webp"
 import Vedika from "../assets/BE25/Vedika.webp"
+import Shravani from "../assets/BE25/Shravani.webp"
+import Shaunak from "../assets/BE25/Shaunak.webp"
 
 const CurrentCouncil = () => {
   return (
@@ -72,12 +74,12 @@ const CurrentCouncil = () => {
             />
 
             <Card
-              name="Kshitj Patki"
-              role="Senior Treasurer"
-              image={Kshitij}
-              email="2022.kshitij.patki@ves.ac.in"
-              github="https://github.com/Kush1612"
-              linkedin="https://www.linkedin.com/in/kshitijpatki/"
+              name="Ishan Kiran Joshi"
+              role="Senior Public Relations Head"
+              image={Ishan}
+              email="2022.ishan.joshi@ves.ac.in"
+              github="https://github.com/Ishan2611"
+              linkedin="https://www.linkedin.com/in/ishan-joshi-3677042a7/"
             />
 
             <Card
@@ -90,21 +92,23 @@ const CurrentCouncil = () => {
             />
 
             <Card
+              name="Kshitj Patki"
+              role="Senior Treasurer"
+              image={Kshitij}
+              email="2022.kshitij.patki@ves.ac.in"
+              github="https://github.com/Kush1612"
+              linkedin="https://www.linkedin.com/in/kshitijpatki/"
+            />
+
+
+            {/* <Card
               name="Reet Sharma"
               role="Senior Public Relations Head"
               image={Reet}
               email="2022.reet.sharma@ves.ac.in"
-            />
+            /> */}
 
-            <Card
-              name="Ishan Kiran Joshi"
-              role="Senior Public Relations Head"
-              image={Ishan}
-              email="2022.ishan.joshi@ves.ac.in"
-              github="https://github.com/Ishan2611"
-              linkedin="https://www.linkedin.com/in/ishan-joshi-3677042a7/"
-            />
-
+            
             <Card
               name="Akshit Ramrane"
               role="Senior Graphics Head"
@@ -113,6 +117,7 @@ const CurrentCouncil = () => {
               github="https://github.com/Akshit-Ramrane"
               linkedin="https://www.linkedin.com/in/akshit-ramrane-b1980825b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             />
+
 
             <Card
               name="Tanay Baisware"
@@ -125,7 +130,7 @@ const CurrentCouncil = () => {
             <Card
               name="Shravani Kale"
               role="Senior Technical Head"
-              image={Krish}
+              image={Shravani}
               email="2021.shravani.kale@ves.ac.in"
               github="https://github.com/Algoscribe"
             />
@@ -172,23 +177,7 @@ const CurrentCouncil = () => {
               linkedin="https://www.linkedin.com/in/nidhi-bamhane-13a5b72b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             />
 
-            <Card
-              name="Mahek Kawna"
-              role="Jr. Operations"
-              image={Mahek}
-              email="2023.mahek.kawna@ves.ac.in"
-              github="https://github.com/Mahekkawna"
-              linkedin="https://www.linkedin.com/in/mahek-kawna-73530728b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            />
-
-            <Card
-              name="Rajat Saha"
-              role="Jr. Treasurer"
-              image={rajat}
-              email="2023.rajat.saha@ves.ac.in"
-              github="https://github.com/PikaPi1402"
-              linkedin="https://www.linkedin.com/in/rajat-saha-90877a301"
-            />
+           
 
             <Card
               name="Udayan Kundu"
@@ -206,6 +195,42 @@ const CurrentCouncil = () => {
               email="2023.unnati.singh@ves.ac.in"
               github="https://github.com/unnss18"
               linkedin="http://linkedin.com/in/unnati-s-6310b32a1"
+            />
+
+             <Card
+              name="Mahek Kawna"
+              role="Jr. Operations"
+              image={mahek}
+              email="2023.mahek.kawna@ves.ac.in"
+              github="https://github.com/Mahekkawna"
+              linkedin="https://www.linkedin.com/in/mahek-kawna-73530728b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            />
+            
+            <Card
+              name="Krish Dambir"
+              role="Jr. Web/App Editor"
+              image={krish}
+              email="krishdambir2718@gmail.com"
+              github="https://github.com/krishgit24"
+              linkedin="https://www.linkedin.com/in/krish-dambir-1701a2289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            />
+
+            <Card
+              name="Purva Mhatre"
+              role="Jr. Web/App Editor"
+              image={Purva}
+              email="d2023.purva.mhatre@ves.ac.in"
+              github="https://github.com/purvadeepak16"
+            />
+
+
+            <Card
+              name="Rajat Saha"
+              role="Jr. Treasurer"
+              image={rajat}
+              email="2023.rajat.saha@ves.ac.in"
+              github="https://github.com/PikaPi1402"
+              linkedin="https://www.linkedin.com/in/rajat-saha-90877a301"
             />
 
             <Card
@@ -255,7 +280,7 @@ const CurrentCouncil = () => {
             <Card
               name="Shaunak Karambelkar"
               role="Jr. Technical Head"
-              image={Krish}
+              image={Shaunak}
               email="2023.shaunak.karambelkar@ves.ac.in"
               linkedin="https://www.linkedin.com/in/shaunak-karambelkar-4282bb272?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             />
@@ -279,23 +304,6 @@ const CurrentCouncil = () => {
             />
 
             <Card
-              name="Krish Dambir"
-              role="Jr. Web/App Editor"
-              image={Krish}
-              email="krishdambir2718@gmail.com"
-              github="https://github.com/krishgit24"
-              linkedin="https://www.linkedin.com/in/krish-dambir-1701a2289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            />
-
-            <Card
-              name="Purva Mhatre"
-              role="Jr. Web/App Editor"
-              image={Purva}
-              email="d2023.purva.mhatre@ves.ac.in"
-              github="https://github.com/purvadeepak16"
-            />
-
-            <Card
               name="Vedika Parab"
               role="Jr. Women In Engineering"
               image={Vedika}
@@ -307,10 +315,10 @@ const CurrentCouncil = () => {
         </div>
 
         {/* S.E. s */}
-        <div className="w-full mx-auto px-4 flex flex-col items-center my-8">
+        {/* <div className="w-full mx-auto px-4 flex flex-col items-center my-8">
           <h3 className="uppercase my-8">se council</h3>
           <div className="w-full flex flex-row flex-wrap justify-center items-center gap-8"></div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

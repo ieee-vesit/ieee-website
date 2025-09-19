@@ -54,8 +54,10 @@ const Navbar = () => {
       <div className="navbar">
         <i className="bx bx-menu" onClick={toggleSidebar}></i>
         <div className="logo">
-          <img src={logo} alt="logo" className="logo-image hidden md:block" />
-          <img src={logorev} alt="logo" className="logo-image md:hidden" />
+          <Link to="/" onClick={closeSidebar}>
+            <img src={logo} alt="logo" className="logo-image hidden md:block" />
+            <img src={logorev} alt="logo" className="logo-image md:hidden" />
+          </Link>
         </div>
         <div
           className={menuVisible ? "nav-links show" : "nav-links"}
@@ -101,19 +103,82 @@ const Navbar = () => {
               </ul>
             </li>
 
-            <li onMouseEnter={() => handleMouseEnter("events")} onMouseLeave={handleMouseLeave}>
+            {/* <li onMouseEnter={() => handleMouseEnter("events")} onMouseLeave={handleMouseLeave}>
               <a href="#" onClick={() => toggleDropdown("events")}>EVENTS</a>
               <i className={`bx bxs-chevron-down arrow ${activeDropdown === "events" ? "rotate" : ""}`}></i>
               <ul className={`sub-menu ${activeDropdown === "events" ? "show" : ""}`}>
-                <Link to="/melange" onClick={closeSidebar}><li><a href="#" className="uppercase">Upcoming</a></li></Link>
+                <li><a href="#"className="uppercase"
+                      onClick={(e) => {
+                      e.preventDefault();
+                      alert("Upcoming events will be announced soon!");
+                    }}
+                    > Upcoming
+                    </a>
+                </li>
                 <Link to="/events" onClick={closeSidebar}><li><a href="#" className="uppercase">Past</a></li></Link>
-                {/* <li><a href="#" className="uppercase" onClick={closeSidebar}>Papers</a></li> */}
-                {/* <li><a href="#" className="uppercase" onClick={closeSidebar}>Magazines</a></li> */}
+
+              </ul>
+            </li> */}
+
+            <li
+              onMouseEnter={() => handleMouseEnter("events")}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                className="flex items-center gap-1 uppercase"
+                onClick={() => toggleDropdown("events")}
+              >
+                EVENTS
+                <i
+                  className={`bx bxs-chevron-down arrow ${
+                    activeDropdown === "events" ? "rotate" : ""
+                  }`}
+                ></i>
+              </button>
+
+              <ul className={`sub-menu ${activeDropdown === "events" ? "show" : ""}`}>
+                {/* 🔹 Upcoming Event → TPP Workshop */}
+                <li>
+                  <Link to="/tpp-workshop" onClick={closeSidebar} className="uppercase">
+                    Upcoming (TPP Workshop)
+                  </Link>
+                </li>
+
+                {/* 🔹 Past Events */}
+                <li>
+                  <Link to="/events" onClick={closeSidebar} className="uppercase">
+                    Past
+                  </Link>
+                </li>
               </ul>
             </li>
+
+
+
             <Link to="/developers" onClick={closeSidebar}><li><a href="#" onClick={closeSidebar}>DEVELOPERS</a></li></Link>
             <Link to="/contact" onClick={closeSidebar}><li><a href="#" onClick={closeSidebar}>CONTACT</a></li></Link>
-            <Link to="/melange" onClick={closeSidebar}><li className="bg-[color:--color3] hover:!bg-[color:--white] duration-500"><a href="#" onClick={closeSidebar}><i class="fa-solid fa-arrow-pointer"></i> REGISTER</a></li></Link>
+            {/* <li className="bg-[color:--color3] hover:!bg-[color:--white] duration-500 cursor-not-allowed">
+                <a href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      closeSidebar();
+                      alert("Registration will open soon!");
+                    }}
+                  >
+                    <i className="fa-solid fa-arrow-pointer"></i> REGISTER
+                </a>
+            </li> */}
+            <li className="bg-[color:--color3] hover:!bg-[color:--white] duration-500">
+              <a
+                href="https://forms.gle/xoFjuC26QgBS7fsJ6" // replace with your actual Google Form link
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeSidebar}
+              >
+                <i className="fa-solid fa-arrow-pointer"></i> REGISTER
+              </a>
+            </li>
+
             <Link to="/join_ieee" onClick={closeSidebar}><li className="bg-[color:--color2] hover:!bg-[color:--white] duration-500"><a href="#" onClick={closeSidebar}><i class="fa-solid fa-hat-cowboy"></i> JOIN IEEE</a></li></Link>
           </ul>
         </div>
