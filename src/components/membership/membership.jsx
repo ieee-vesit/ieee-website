@@ -6,9 +6,9 @@
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
     const yearOptions = [
-        { value: 'SE', label: 'Second Year (SE)', price: '₹ 650' },
-        { value: 'TE', label: 'Third Year (TE)', price: '₹ 650' },
-        { value: 'BE', label: 'Fourth Year (BE)', price: '₹ 650' }
+        { value: 'SE', label: 'Student Section Membership', price: '₹ 650' },
+        // { value: 'TE', label: 'Third Year (TE)', price: '₹ 650' },
+        // { value: 'BE', label: 'Fourth Year (BE)', price: '₹ 650' }
     ];
 
     const selectedOption = yearOptions.find(option => option.value === selectedYear);
@@ -40,7 +40,7 @@
                 >
                 <span className="font-semibold">{selectedOption.label}</span>
                 <span className="font-bold">{selectedOption.price}</span>
-                <svg 
+                {/* <svg 
                     className={`w-4 h-4 ml-2 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} 
                     fill="none" 
                     stroke="currentColor" 
@@ -48,10 +48,10 @@
                     xmlns="http://www.w3.org/2000/svg"
                 >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+                </svg> */}
                 </button>
                 
-                {isDropdownOpen && (
+                {/* {isDropdownOpen && (
                 <div className="absolute z-10 w-full mt-1 bg-white rounded-md shadow-lg">
                     {yearOptions.map((option) => (
                     <div 
@@ -69,7 +69,7 @@
                     </div>
                     ))}
                 </div>
-                )}
+                )} */}
             </div>
 
             {/* Divider */}
