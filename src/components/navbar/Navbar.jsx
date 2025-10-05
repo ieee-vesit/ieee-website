@@ -170,7 +170,7 @@ const Navbar = () => {
             </li> */}
             <li className="bg-[color:--color3] hover:!bg-[color:--white] duration-500">
               <a
-                href="https://forms.gle/xoFjuC26QgBS7fsJ6" // replace with your actual Google Form link
+                href="" // replace with your actual Google Form link
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeSidebar}

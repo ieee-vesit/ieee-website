@@ -21,15 +21,15 @@ import pratham from "../assets/BE25/Pratham.webp";
 import Rakshit from "../assets/BE25/Rakshit.webp";
 import Reet from "../assets/BE25/Reet.webp";
 import Tanay from "../assets/BE25/Tanay.webp";
-import greshaMam from "../assets/faculty/Gresha ma'am.webp"
-import ashwiniMam from "../assets/faculty/Ashwini ma'am.webp"
-import Akshit from "../assets/BE25/Akshit.webp"
-import Nidhi from "../assets/BE25/Nidhi.webp"
-import Shreshtha from "../assets/BE25/Shreshtha.webp"
-import Purva from "../assets/BE25/Purva.webp"
-import Vedika from "../assets/BE25/Vedika.webp"
-import Shravani from "../assets/BE25/Shravani.webp"
-import Shaunak from "../assets/BE25/Shaunak.webp"
+import greshaMam from "../assets/faculty/Gresha ma'am.webp";
+import ashwiniMam from "../assets/faculty/Ashwini ma'am.webp";
+import Akshit from "../assets/BE25/Akshit.webp";
+import Nidhi from "../assets/BE25/Nidhi.webp";
+import Shreshtha from "../assets/BE25/Shreshtha.webp";
+import Purva from "../assets/BE25/Purva.webp";
+import Vedika from "../assets/BE25/Vedika.webp";
+import Shravani from "../assets/BE25/Shravani.webp";
+import Shaunak from "../assets/BE25/Shaunak.webp";
 
 const CurrentCouncil = () => {
   return (
@@ -74,12 +74,37 @@ const CurrentCouncil = () => {
             />
 
             <Card
+              name="Kshitj Patki"
+              role="Senior Treasurer"
+              image={Kshitij}
+              email="2022.kshitij.patki@ves.ac.in"
+              github="https://github.com/Kush1612"
+              linkedin="https://www.linkedin.com/in/kshitijpatki/"
+            />
+
+            <Card
               name="Ishan Kiran Joshi"
               role="Senior Public Relations Head"
               image={Ishan}
               email="2022.ishan.joshi@ves.ac.in"
               github="https://github.com/Ishan2611"
               linkedin="https://www.linkedin.com/in/ishan-joshi-3677042a7/"
+            />
+
+            {/* <Card
+              name="Reet Sharma"
+              role="Senior Public Relations Head"
+              image={Reet}
+              email="2022.reet.sharma@ves.ac.in"
+            /> */}
+
+            <Card
+              name="Akshit Ramrane"
+              role="Senior Graphics Head"
+              image={Akshit}
+              email="2022.akshit.ramrane@ves.ac.in"
+              github="https://github.com/Akshit-Ramrane"
+              linkedin="https://www.linkedin.com/in/akshit-ramrane-b1980825b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             />
 
             <Card
@@ -90,34 +115,6 @@ const CurrentCouncil = () => {
               github="https://github.com/prathamm2506"
               linkedin="https://www.linkedin.com/in/pratham-matkar-a2bb77257/"
             />
-
-            <Card
-              name="Kshitj Patki"
-              role="Senior Treasurer"
-              image={Kshitij}
-              email="2022.kshitij.patki@ves.ac.in"
-              github="https://github.com/Kush1612"
-              linkedin="https://www.linkedin.com/in/kshitijpatki/"
-            />
-
-
-            {/* <Card
-              name="Reet Sharma"
-              role="Senior Public Relations Head"
-              image={Reet}
-              email="2022.reet.sharma@ves.ac.in"
-            /> */}
-
-            
-            <Card
-              name="Akshit Ramrane"
-              role="Senior Graphics Head"
-              image={Akshit}
-              email="2022.akshit.ramrane@ves.ac.in"
-              github="https://github.com/Akshit-Ramrane"
-              linkedin="https://www.linkedin.com/in/akshit-ramrane-b1980825b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            />
-
 
             <Card
               name="Tanay Baisware"
@@ -177,7 +174,23 @@ const CurrentCouncil = () => {
               linkedin="https://www.linkedin.com/in/nidhi-bamhane-13a5b72b5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             />
 
-           
+            <Card
+              name="Rajat Saha"
+              role="Jr. Treasurer"
+              image={rajat}
+              email="2023.rajat.saha@ves.ac.in"
+              github="https://github.com/PikaPi1402"
+              linkedin="https://www.linkedin.com/in/rajat-saha-90877a301"
+            />
+
+            <Card
+              name="Mahek Kawna"
+              role="Jr. Operations"
+              image={mahek}
+              email="2023.mahek.kawna@ves.ac.in"
+              github="https://github.com/Mahekkawna"
+              linkedin="https://www.linkedin.com/in/mahek-kawna-73530728b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            />
 
             <Card
               name="Udayan Kundu"
@@ -195,42 +208,6 @@ const CurrentCouncil = () => {
               email="2023.unnati.singh@ves.ac.in"
               github="https://github.com/unnss18"
               linkedin="http://linkedin.com/in/unnati-s-6310b32a1"
-            />
-
-             <Card
-              name="Mahek Kawna"
-              role="Jr. Operations"
-              image={mahek}
-              email="2023.mahek.kawna@ves.ac.in"
-              github="https://github.com/Mahekkawna"
-              linkedin="https://www.linkedin.com/in/mahek-kawna-73530728b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            />
-            
-            <Card
-              name="Krish Dambir"
-              role="Jr. Web/App Editor"
-              image={krish}
-              email="krishdambir2718@gmail.com"
-              github="https://github.com/krishgit24"
-              linkedin="https://www.linkedin.com/in/krish-dambir-1701a2289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            />
-
-            <Card
-              name="Purva Mhatre"
-              role="Jr. Web/App Editor"
-              image={Purva}
-              email="d2023.purva.mhatre@ves.ac.in"
-              github="https://github.com/purvadeepak16"
-            />
-
-
-            <Card
-              name="Rajat Saha"
-              role="Jr. Treasurer"
-              image={rajat}
-              email="2023.rajat.saha@ves.ac.in"
-              github="https://github.com/PikaPi1402"
-              linkedin="https://www.linkedin.com/in/rajat-saha-90877a301"
             />
 
             <Card
@@ -302,6 +279,33 @@ const CurrentCouncil = () => {
               github="https://github.com/Samarth-Ad"
               linkedin="https://www.linkedin.com/in/samarth-adsare-564a6229b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             />
+
+            
+
+            <Card
+              name="Krish Dambir"
+              role="Jr. Web/App Editor"
+              image={krish}
+              email="krishdambir2718@gmail.com"
+              github="https://github.com/krishgit24"
+              linkedin="https://www.linkedin.com/in/krish-dambir-1701a2289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            />
+
+            <Card
+              name="Purva Mhatre"
+              role="Jr. Web/App Editor"
+              image={Purva}
+              email="d2023.purva.mhatre@ves.ac.in"
+              github="https://github.com/purvadeepak16"
+            />
+
+            
+
+            
+
+            
+
+            
 
             <Card
               name="Vedika Parab"

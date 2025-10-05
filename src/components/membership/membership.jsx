@@ -7,8 +7,8 @@
 
     const yearOptions = [
         { value: 'SE', label: 'Second Year (SE)', price: '₹ 650' },
-        { value: 'TE', label: 'Third Year (TE)', price: '₹ 450' },
-        { value: 'BE', label: 'Fourth Year (BE)', price: '₹ 300' }
+        { value: 'TE', label: 'Third Year (TE)', price: '₹ 650' },
+        { value: 'BE', label: 'Fourth Year (BE)', price: '₹ 650' }
     ];
 
     const selectedOption = yearOptions.find(option => option.value === selectedYear);
@@ -116,7 +116,7 @@
             <div className="mt-4 space-y-2">
                 <div className="flex justify-between p-3 rounded-lg" style={{backgroundColor: "var(--color2"}}>
                 <span className="font-semibold">International Membership</span>
-                <span className="font-bold">$7 + Taxes</span>
+                <span className="font-bold">$14 + Taxes</span>
                 </div>
             </div>
 
