@@ -39,6 +39,9 @@ import MongoInit from './pages/workshops/Mongo.jsx';
 import UIUXWorkshop from './pages/workshops/uiux_25.jsx';
 import PCB from './pages/workshops/pcb.jsx';
 import TPPWorkshop from './pages/workshops/Tpp_25.jsx';
+import Arcane from './pages/workshops/Arcane.jsx';
+import CTF from './pages/workshops/CTF.jsx';
+import Symp2 from './pages/workshops/Sympo2.jsx';
 
 function App() {
   return (
@@ -67,7 +70,7 @@ function App() {
         <Route path="/crypto_chrome" element={<CryptoChrome />} />
         <Route path="/flutter" element={<Flutter />} />
         <Route path="/hpomen" element={<HpOmen />} />
-        <Route path="/machine_minds" element={<MachineMinds />} />
+       
         <Route path="/nexiot" element={<NexIoT />} />
         <Route path="/paperquest" element={<PaperQuest />} />
         <Route path="/uiux" element={<UIUX />} />
@@ -79,6 +82,11 @@ function App() {
         <Route path="/uiux25" element={<UIUXWorkshop />} />
         <Route path="/pcb" element={<PCB />} />
         <Route path="/tpp-workshop" element={<TPPWorkshop/>} />
+         <Route path="/machine_minds" element={<MachineMinds />} />
+         <Route path="/CTF" element={<CTF />} />
+         <Route path="/Arcane" element={<Arcane />} />
+         <Route path="/symp2" element={<Symp2 />} />
+
 
       </Routes>
       <Footer />
