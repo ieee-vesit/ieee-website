@@ -9,6 +9,7 @@ import Footer from "./components/footer/Footer";
 import ContactPage from "./pages/ContactPage";
 import JoinPage from "./pages/JoinPage";
 import ScrollToTop from "./ScrollToTop";
+import PageTransition from "./theme/PageTransition";
 import PrevCouncil1 from './pages/PrevCouncil1';
 import Developers from './pages/Developers';
 import WIE from './pages/WIE/WIE';
@@ -43,12 +44,16 @@ import TPPWorkshop from './pages/workshops/Tpp_25.jsx';
 import Arcane from './pages/workshops/Arcane.jsx';
 import CTF from './pages/workshops/CTF.jsx';
 import Symp2 from './pages/workshops/Sympo2.jsx';
+import APIcalypse26 from './pages/workshops/Apicalypse26.jsx';
+import CareerSync from './pages/workshops/CareerSync.jsx';
+import IEEEXplore from './pages/workshops/IEEEXplore.jsx';
 
 function App() {
   return (
     <Router>
       <Navbar />
       <ScrollToTop />
+      <PageTransition>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/council26-27" element={<CurrentCouncil2627 />} />
@@ -88,9 +93,13 @@ function App() {
          <Route path="/CTF" element={<CTF />} />
          <Route path="/Arcane" element={<Arcane />} />
          <Route path="/symp2" element={<Symp2 />} />
+         <Route path="/apicalypse26" element={<APIcalypse26 />} />
+         <Route path="/careersync" element={<CareerSync />} />
+         <Route path="/ieee_xplore" element={<IEEEXplore />} />
 
 
       </Routes>
+      </PageTransition>
       <Footer />
     </Router>
   );

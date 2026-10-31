@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import LogoLoader from "../Loader/LogoLoader";
 
 
 const EventDescription = ({
@@ -8,7 +9,9 @@ const EventDescription = ({
   image,
   description,
   linkform,
-  galleryImages   // 🔥 NEW PROP
+  galleryImages,  // 🔥 NEW PROP
+  hideRegister = false,
+  imageFit = "cover"
 }) => {
 
   const [loading, setLoading] = useState(true);
@@ -35,18 +38,9 @@ const EventDescription = ({
     });
   }, [image]);
 
-  // 🔥 LOADER
+  // Logo loader while the poster images load
   if (loading) {
-    return (
-      <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
-        <div className="flex flex-col items-center gap-4">
-          <div className="w-14 h-14 border-4 border-gray-300 border-t-black rounded-full animate-spin"></div>
-          <p className="text-sm text-gray-600 tracking-wide">
-            Loading event...
-          </p>
-        </div>
-      </div>
-    );
+    return <LogoLoader />;
   }
 
   return (
@@ -84,7 +78,11 @@ const EventDescription = ({
           <img
             src={image}
             alt="event"
-            className="rounded-xl shadow-md hover:scale-105 transition duration-500 max-h-[450px] w-full object-cover"
+            className={
+              imageFit === "contain"
+                ? "rounded-xl shadow-md max-h-[650px] w-auto max-w-full object-contain"
+                : "rounded-xl shadow-md hover:scale-105 transition duration-500 max-h-[450px] w-full object-cover"
+            }
           />
         </div>
 
@@ -94,6 +92,7 @@ const EventDescription = ({
         </div>
 
         {/* Register Button */}
+        {!hideRegister && (
         <div className="flex justify-center mb-12">
           <button
             onClick={() => window.open("https://forms.gle/gPrA2sc8sUVoVxbY8", "_blank")}
@@ -104,6 +103,7 @@ const EventDescription = ({
             REGISTER NOW
           </button>
         </div>
+        )}
 
         {/* Gallery */}
         <div className="mt-6">

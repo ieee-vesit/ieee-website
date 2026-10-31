@@ -1,0 +1,322 @@
+/* ==========================================================================
+   Component restyle — loaded after every component stylesheet, so these win.
+   Structure and behaviour are untouched; only surfaces, type and motion change.
+   ========================================================================== */
+
+/* ---------- panels: one frosted recipe, reused ---------- */
+
+.card,
+.provideCard,
+.testimonial-card,
+.translucent-box,
+.event-card,
+.ec-card,
+.ec-sidebar-item,
+.membership-card,
+.community-stats-card,
+.faq-item {
+  position: relative;
+  isolation: isolate;
+  background: var(--gloss), var(--glass) !important;
+  border: 1px solid var(--glass-line) !important;
+  box-shadow: var(--glass-shadow) !important;
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(180%);
+  backdrop-filter: blur(var(--blur)) saturate(180%);
+  color: var(--ink);
+  transition: transform var(--t) var(--ease), box-shadow var(--t) var(--ease), background var(--t) var(--ease) !important;
+}
+.card:hover,
+.provideCard:hover,
+.testimonial-card:hover,
+.event-card:hover,
+.ec-card:hover,
+.membership-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: var(--glass-shadow-hover) !important;
+}
+/* pointer highlight overlay for panels that are not .glass */
+.card::after,
+.provideCard::after,
+.testimonial-card::after,
+.translucent-box::after,
+.event-card::after,
+.ec-card::after,
+.membership-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  background: radial-gradient(340px circle at var(--mx, 50%) var(--my, 0%), var(--sheen), transparent 62%);
+  transition: opacity var(--t) var(--ease);
+}
+.card:hover::after,
+.provideCard:hover::after,
+.testimonial-card:hover::after,
+.translucent-box:hover::after,
+.event-card:hover::after,
+.ec-card:hover::after,
+.membership-card:hover::after { opacity: 1; }
+
+.card, .provideCard, .testimonial-card, .event-card, .ec-card, .membership-card { border-radius: var(--r-l) !important; }
+.translucent-box { border-radius: var(--r-m) !important; }
+
+/* ---------- hero slider: a plain framed picture, whole image visible, no glass ---------- */
+
+.slider {
+  width: min(1080px, calc(100% - 36px)) !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+  margin: 92px auto 0 !important;
+  border-radius: var(--r-l);
+  border: 1px solid var(--hairline);
+  background: color-mix(in srgb, var(--ink) 7%, var(--bg));
+  box-shadow: 0 18px 44px -24px rgba(13, 24, 34, 0.5);
+  overflow: hidden;
+}
+.slider .list .item { background: color-mix(in srgb, var(--ink) 7%, var(--bg)); }
+.slider .list .item img {
+  object-fit: contain !important;
+  box-shadow: none !important;
+}
+.nextPrevArrows {
+  bottom: 14px !important;
+  gap: 8px !important;
+  padding: 0;
+  background: none;
+  border: 0;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+.nextPrevArrows button {
+  width: 42px !important;
+  height: 34px !important;
+  border-radius: 999px !important;
+  background: rgba(13, 24, 34, 0.62) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  transition: background var(--t) var(--ease), transform var(--t-fast) var(--ease) !important;
+}
+.nextPrevArrows button:hover { background: var(--accent) !important; color: var(--accent-ink) !important; }
+.nextPrevArrows button:active { transform: scale(0.94); }
+@media (max-width: 700px) {
+  .slider { aspect-ratio: 4 / 3; margin-top: 84px !important; border-radius: var(--r-m); }
+}
+
+/* ---------- about ---------- */
+
+.about { background: transparent !important; }
+.h1, .h2, .h3,
+.about h1, .about h2, .about h3 {
+  font-family: var(--font) !important;
+  text-transform: none !important;
+  letter-spacing: -0.02em !important;
+  font-weight: 650 !important;
+  color: var(--ink) !important;
+}
+.translucent-box { padding: clamp(18px, 2.4vw, 30px); }
+.p1, .p2, .p3, .para1, .para2, .para3 { color: var(--ink-2) !important; }
+.pic1 img, .pic2 img, .pic3 img {
+  border-radius: var(--r-m);
+  background: #fff;
+  box-shadow: 0 14px 34px -18px rgba(13, 24, 34, 0.45);
+}
+
+/* ---------- "What we provide" ---------- */
+
+.provide-main-wrapper { background: transparent !important; }
+.provide-title-text,
+.testimonials-heading {
+  font-family: var(--font) !important;
+  text-transform: none !important;
+  letter-spacing: -0.02em !important;
+  font-weight: 650 !important;
+  font-size: var(--h2) !important;
+  color: var(--ink) !important;
+}
+.provideCard { overflow: hidden; }
+.provide-grid-container .provideCard h3,
+.provide-grid-container .provideCard .card-title,
+.provide-grid-container .provideCard .provide-svg-icon { color: var(--ink) !important; font-weight: 650 !important; letter-spacing: -0.01em !important; font-size: clamp(1.25rem, 1.8vw, 1.6rem) !important; }
+.provide-grid-container .provideCard p,
+.provide-grid-container .provideCard .card-content { color: var(--ink-2) !important; background: var(--glass-strong) !important; font-weight: 500 !important; }
+.provideCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gloss);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: -1;
+}
+.provideCard svg, .provideCard i, .provideCard img { transition: transform 0.6s var(--ease); }
+.provideCard:hover svg, .provideCard:hover i { transform: translateY(-4px) scale(1.06); }
+
+/* ---------- testimonials ---------- */
+
+.testimonials-section { background: transparent !important; }
+.testimonial-card.card-bg-0, .testimonial-card.card-bg-1, .testimonial-card.card-bg-2, .testimonial-card.card-bg-3 {
+  background: var(--gloss), var(--glass) !important;
+}
+.testimonial-name { color: var(--ink) !important; }
+.testimonial-branch { color: var(--ink-3) !important; }
+.testimonial-text { color: var(--ink-2) !important; }
+.quote-mark { color: var(--accent) !important; opacity: 0.5; }
+.image-wrapper { border-color: var(--glass-strong) !important; background: var(--glass-strong) !important; }
+
+/* ---------- people cards ---------- */
+
+.card .hover-box,
+.card .icons-box { background: transparent !important; }
+.card h1, .card h2, .card h3, .card h4, .card p, .card span { color: var(--ink) !important; }
+.card p { color: var(--ink-2) !important; }
+.card i, .card svg { color: var(--ink-2); transition: color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease); }
+.card i:hover, .card svg:hover { color: var(--accent); transform: translateY(-2px); }
+
+/* ---------- footer ---------- */
+
+footer {
+  background: var(--glass) !important;
+  border-top: 1px solid var(--glass-line);
+  -webkit-backdrop-filter: blur(var(--blur));
+  backdrop-filter: blur(var(--blur));
+  color: var(--ink);
+}
+footer .border-t { border-color: var(--hairline) !important; }
+footer small, footer p, footer li, footer a { color: var(--ink-2); }
+footer small:hover, footer a:hover small { color: var(--accent) !important; transition: color var(--t-fast) var(--ease); }
+footer h2 { color: var(--ink) !important; }
+/* the footer mark is a dark artwork; flip it on dark backgrounds */
+[data-theme="dark"] footer img[alt="IEEE-VESIT Logo"] { filter: invert(1) hue-rotate(180deg); }
+
+/* ---------- generic content surfaces ---------- */
+
+section, main { color: var(--ink); }
+
+/* Tailwind utility classes used in a few pages, mapped onto the theme */
+[data-theme="dark"] .bg-white { background-color: var(--white) !important; }
+[data-theme="dark"] .bg-gray-50,
+[data-theme="dark"] .bg-gray-100,
+[data-theme="dark"] .bg-gray-200,
+[data-theme="dark"] .bg-gray-300 { background-color: var(--glass) !important; }
+[data-theme="dark"] .bg-blue-100,
+[data-theme="dark"] .bg-blue-200 { background-color: var(--accent-soft) !important; }
+[data-theme="dark"] .text-black,
+[data-theme="dark"] .text-gray-900,
+[data-theme="dark"] .text-gray-800,
+[data-theme="dark"] .text-gray-700 { color: var(--ink) !important; }
+[data-theme="dark"] .text-gray-600,
+[data-theme="dark"] .text-gray-500 { color: var(--ink-2) !important; }
+[data-theme="dark"] .border-gray-100,
+[data-theme="dark"] .border-gray-200,
+[data-theme="dark"] .border-gray-300 { border-color: var(--hairline) !important; }
+
+/* ---------- forms ---------- */
+
+input, textarea, select {
+  background: var(--glass-strong);
+  color: var(--ink);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-s);
+  transition: border-color var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+input::placeholder, textarea::placeholder { color: var(--ink-3); }
+
+/* ---------- buttons found across pages ---------- */
+
+button:not(.theme-toggle):not(.nav-burger):not(.nav-close) { transition: background var(--t) var(--ease), color var(--t) var(--ease), transform var(--t-fast) var(--ease); }
+
+/* ---------- event tags ---------- */
+.ec-tag { letter-spacing: 0.02em !important; text-transform: none !important; color: var(--ink) !important; border: 1px solid var(--hairline); }
+.tag-workshop   { background: color-mix(in srgb, #3fb37f 22%, transparent) !important; }
+.tag-competition{ background: color-mix(in srgb, #e5706a 22%, transparent) !important; }
+.tag-talk       { background: color-mix(in srgb, #e0b43a 24%, transparent) !important; }
+.tag-hackathon  { background: color-mix(in srgb, #6f7df0 24%, transparent) !important; }
+footer .border-t { border-color: var(--hairline) !important; }
+footer hr, footer .border-b { border-color: var(--hairline) !important; background: var(--hairline) !important; }
+
+/* ---------- gloss: a slanted specular streak across every frosted panel ---------- */
+.card::before,
+.testimonial-card::before,
+.translucent-box::before,
+.event-card::before,
+.ec-card::before,
+.ec-sidebar-item::before,
+.membership-card::before,
+.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--gloss);
+  pointer-events: none;
+  z-index: -1;
+}
+.nav-burger, .theme-toggle { box-shadow: var(--glass-shadow); }
+nav.navbar-shell { box-shadow: 0 1px 0 rgba(255,255,255,0.55) inset; }
+[data-theme="dark"] nav.navbar-shell { box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset; }
+nav.navbar-shell .navbar .links li .sub-menu { background: var(--glass-strong); }
+nav.navbar-shell .navbar .links li .sub-menu { isolation: isolate; }
+nav.navbar-shell .navbar .links li .sub-menu::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: var(--gloss); pointer-events: none; z-index: -1; }
+.nav-join { box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset, 0 8px 18px -8px var(--accent); }
+.btn { box-shadow: 0 1px 0 rgba(255,255,255,0.35) inset, 0 8px 18px -8px var(--accent); }
+
+/* ---------- contact page (Forms) ---------- */
+.borderRadius-12 {
+  border-radius: var(--r-m) !important;
+}
+.custom-shadow { box-shadow: var(--glass-shadow) !important; }
+section .borderRadius-12.custom-shadow,
+.borderRadius-12.group,
+div.bg-white.borderRadius-12 {
+  position: relative;
+  isolation: isolate;
+  background: var(--glass) !important;
+  border: 1px solid var(--glass-line) !important;
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(180%);
+  backdrop-filter: blur(var(--blur)) saturate(180%);
+}
+.borderRadius-12.group::before,
+div.bg-white.borderRadius-12::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  background: var(--gloss); pointer-events: none; z-index: -1;
+}
+.borderRadius-12.group:hover { box-shadow: var(--glass-shadow-hover) !important; border-color: var(--glass-line) !important; }
+.borderRadius-12.group > .absolute { display: none; }
+.borderRadius-12.group h3 { color: var(--ink) !important; }
+.borderRadius-12.group p { color: var(--ink-2) !important; opacity: 1 !important; }
+.borderRadius-12.group .bg-white, .borderRadius-12.group a.bg-white { background: var(--glass-strong) !important; color: var(--ink); }
+.borderRadius-12.group a, .borderRadius-12.group a i { color: var(--ink-2) !important; }
+.borderRadius-12.group a:hover i { color: var(--accent) !important; }
+label { color: var(--ink-2) !important; }
+.cardx { background: var(--glass) !important; border: 1px solid var(--glass-line); border-radius: var(--r-m); box-shadow: var(--glass-shadow); }
+
+/* ---------- small screens: tiles grow with their text instead of clipping it ---------- */
+.event-card { width: min(400px, 100%) !important; height: auto !important; min-height: 220px; }
+.tier-card { width: min(500px, 100%) !important; height: auto !important; min-height: 557px; }
+.card { max-width: 100%; height: auto !important; min-height: 400px; }
+.card .hover-box { width: min(261px, 86%) !important; }
+.industry { max-width: 100%; }
+.card, .provideCard, .testimonial-card, .event-card, .ec-card, .ec-sidebar-item, .tier-card, .translucent-box {
+  min-width: 0;
+}
+.card :is(h1, h2, h3, h4, p, span, small, li, a),
+.provideCard :is(h3, p),
+.event-card :is(h1, h2, h3, h4, p, span, li),
+.tier-card :is(h1, h2, h3, h4, p, span, li, a),
+.testimonial-card :is(p, h3, span),
+.ec-card :is(h3, p, span),
+.ec-sidebar-item :is(h4, p, span),
+.translucent-box :is(p, h3) { overflow-wrap: anywhere; word-break: normal; }
+@media (max-width: 480px) {
+  .event-card, .tier-card { padding: 16px !important; }
+  .provide-grid-container h3, .provide-grid-container .card-title { font-size: 1.15rem !important; }
+  .event-card-container { padding: 12px !important; }
+}

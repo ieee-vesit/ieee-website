@@ -16,15 +16,15 @@ import Varnika from "../assets/Council2627/Varnika.webp";
 // Add email / github / linkedin to a member later and the icons show up on the card
 const councilMembers = [
   { name: "Aditi Ekawade", role: "Secretary", image: Aditi },
-  { name: "Akash Murthy", role: "Senior Operations Head", image: Akash },
-  { name: "Aayan Shaikh", role: "Senior PR Head", image: Aayan },
+  { name: "Akash Murthy", role: "Senior Operations Head", image: Akash, email: "murthyakash7081@gmail.com", github: "https://github.com/Leon2396", linkedin: "https://www.linkedin.com/in/akash-murthy-373118306" },
+  { name: "Aayan Shaikh", role: "Senior PR Head", image: Aayan, email: "aayanshaikhwork@gmail.com", github: "https://github.com/aayan-bhai" },
   { name: "Disha Dhamecha", role: "Senior Editor", image: Disha },
-  { name: "Prakruti Mishra", role: "Treasurer", image: Prakruti },
-  { name: "Manaswini Joshi", role: "Senior Graphics Head", image: Manaswini },
+  { name: "Prakruti Mishra", role: "Treasurer", image: Prakruti, email: "prakrutim06@gmail.com", github: "https://github.com/gitPrakruti", linkedin: "https://www.linkedin.com/in/prakruti-mishra-26ba11312" },
+  { name: "Manaswini Joshi", role: "Senior Graphics Head", image: Manaswini, email: "13manaswinijoshi@gmail.com", github: "https://github.com/Manas-wini-code" },
   { name: "Riju Mishra", role: "Senior Graphics Head", image: Riju },
   { name: "Gayatri Bajaj", role: "Senior Tech Head", image: Gayatri },
-  { name: "Vansh Lalwani", role: "Senior Tech Head", image: Vansh },
-  { name: "Varnika Chaurasia", role: "Women in Engineering", image: Varnika },
+  { name: "Vansh Lalwani", role: "Senior Tech Head", image: Vansh, email: "d2025.vansh.lalwani@ves.ac.in", github: "https://github.com/VL0650", linkedin: "https://www.linkedin.com/in/vansh-lalwani-9a58a0245" },
+  { name: "Varnika Chaurasia", role: "Women in Engineering", image: Varnika, email: "varnikachaurasia3001@gmail.com", github: "https://github.com/varnika-30" },
 ];
 
 const CurrentCouncil2627 = () => {

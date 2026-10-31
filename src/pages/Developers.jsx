@@ -30,6 +30,9 @@ const Developers = () => {
             name="Vansh Lalwani"
             role="Senior Tech Head"
             image={vansh}
+            email="d2025.vansh.lalwani@ves.ac.in"
+            github="https://github.com/VL0650"
+            linkedin="https://www.linkedin.com/in/vansh-lalwani-9a58a0245"
           />
           <Card
             name="Gayatri Bajaj"
