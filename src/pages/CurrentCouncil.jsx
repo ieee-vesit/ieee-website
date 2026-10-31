@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Card from "../components/Card/Card";
+import LogoLoader from "../components/Loader/LogoLoader";
 import Udayan from "../assets/BE25/Udayan.webp";
 import Unnati from "../assets/BE25/Unnati.webp";
 import Anushka from "../assets/BE25/Anushka.webp";
@@ -109,22 +110,8 @@ const CurrentCouncil = () => {
 
 }, []);
   if (loading) {
-  return (
-    <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
-      <div className="flex flex-col items-center gap-4">
-        
-        {/* Spinner */}
-        <div className="w-14 h-14 border-4 border-gray-300 border-t-black rounded-full animate-spin"></div>
-        
-        {/* Text */}
-        <p className="text-sm tracking-wider text-gray-600">
-          Loading council members...
-        </p>
-
-      </div>
-    </div>
-  );
-}
+    return <LogoLoader />;
+  }
 
   return (
     <div className="mt-24">

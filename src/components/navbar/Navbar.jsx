@@ -1,25 +1,55 @@
 import React, { useState, useEffect } from "react";
-import "./Navbar.css"; // Ensure responsive styles are added here
-import logo from "../../assets/logo.webp";
-import logorev from "../../assets/logorev.webp";
-import logoside from "../../assets/logo-sidebar.webp";
-import PreviousCouncil2425 from "../../pages/PreviousCouncil2425/PreviousCouncil2425.jsx";
-import { Link } from "react-router-dom";
+import "./Navbar.css";
+import { Link, useLocation } from "react-router-dom";
+import ThemeToggle from "../../theme/ThemeToggle";
+
+const Chevron = ({ open }) => (
+  <svg
+    className={`arrow ${open ? "rotate" : ""}`}
+    viewBox="0 0 24 24"
+    width="14"
+    height="14"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    aria-hidden="true"
+  >
+    <path d="m6 9 6 6 6-6" />
+  </svg>
+);
 
 const Navbar = () => {
   const [menuVisible, setMenuVisible] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1000);
+  const [scrolled, setScrolled] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1024);
+      setIsMobile(window.innerWidth <= 1000);
     };
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  // The bar gets a little more body once the page moves under it.
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  // Close menus after every navigation.
+  useEffect(() => {
+    setMenuVisible(false);
+    setActiveDropdown(null);
+  }, [pathname]);
 
   const toggleDropdown = (menu) => {
     if (isMobile) {
@@ -49,138 +79,122 @@ const Navbar = () => {
     }
   };
 
+  const trigger = (menu) => (e) => {
+    e.preventDefault();
+    toggleDropdown(menu);
+  };
+
+  const Brand = () => (
+    <>
+      <img src="/loader-logo.webp" alt="" className="brand-mark brand-mark--light" width="34" height="34" />
+      <img src="/loader-logo-white.webp" alt="" className="brand-mark brand-mark--dark" width="34" height="34" />
+      <span className="brand-name">IEEE VESIT</span>
+    </>
+  );
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar-shell ${scrolled ? "is-scrolled" : ""}`}>
       <div className="navbar">
-        <i className="bx bx-menu" onClick={toggleSidebar}></i>
+        <button
+          type="button"
+          className="nav-burger"
+          aria-label="Open menu"
+          aria-expanded={menuVisible}
+          onClick={toggleSidebar}
+        >
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h10" />
+          </svg>
+        </button>
+
         <div className="logo">
-          <Link to="/" onClick={closeSidebar}>
-            <img src={logo} alt="logo" className="logo-image hidden md:block" />
-            <img src={logorev} alt="logo" className="logo-image md:hidden" />
+          <Link to="/" onClick={closeSidebar} className="brand" aria-label="IEEE VESIT home">
+            <Brand />
           </Link>
         </div>
-        <div
-          className={menuVisible ? "nav-links show" : "nav-links"}
-          style={{ left: menuVisible ? "0" : "-100%" }}
-        >
+
+        <div className={`nav-scrim ${menuVisible ? "show" : ""}`} onClick={toggleSidebar} />
+
+        <div className={menuVisible ? "nav-links show" : "nav-links"}>
           <div className="sidebar-logo logo">
-            <img src={logoside} alt="logo" className="logo-image-side" />
-            <span className="logo-name font-bold">IEEE VESIT</span>
-            <i className="bx bx-x" onClick={toggleSidebar}></i>
+            <span className="brand">
+              <Brand />
+            </span>
+            <button type="button" className="nav-close" aria-label="Close menu" onClick={toggleSidebar}>
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+                <path d="M6 6l12 12M18 6 6 18" />
+              </svg>
+            </button>
           </div>
+
           <ul className="links">
-            <Link to="/" onClick={closeSidebar}><li><a href="#">HOME</a></li></Link>
+            <Link to="/" onClick={closeSidebar}><li><a href="#" onClick={(e) => e.preventDefault()}>Home</a></li></Link>
 
             <li onMouseEnter={() => handleMouseEnter("ieee")} onMouseLeave={handleMouseLeave}>
-              <a href="#" onClick={() => toggleDropdown("ieee")}>IEEE</a>
-              <i className={`bx bxs-chevron-down arrow ${activeDropdown === "ieee" ? "rotate" : ""}`}></i>
+              <a href="#" onClick={trigger("ieee")}>IEEE</a>
+              <Chevron open={activeDropdown === "ieee"} />
               <ul className={`sub-menu ${activeDropdown === "ieee" ? "show" : ""}`}>
-                <li><a href="/myloft" className="uppercase">IEEE Xplore digital library</a></li>
-                {/* <li><a href="https://standards.ieee.org/standard/" className="uppercase" target="_blank" onClick={closeSidebar}>ieee standards</a></li> */}
-                <li><a href="https://spectrum.ieee.org/" className="uppercase" target="_blank" onClick={closeSidebar}>ieee spectrum</a></li>
-                {/* <li><a href="#" className="uppercase" onClick={closeSidebar}>Magazines</a></li> */}
+                <li><a href="/myloft">IEEE Xplore digital library</a></li>
+                <li><a href="https://spectrum.ieee.org/" target="_blank" rel="noreferrer" onClick={closeSidebar}>IEEE Spectrum</a></li>
               </ul>
             </li>
 
             <li onMouseEnter={() => handleMouseEnter("societies")} onMouseLeave={handleMouseLeave}>
-              <a href="#" onClick={() => toggleDropdown("societies")}>SOCIETIES</a>
-              <i className={`bx bxs-chevron-down arrow ${activeDropdown === "societies" ? "rotate" : ""}`}></i>
+              <a href="#" onClick={trigger("societies")}>Societies</a>
+              <Chevron open={activeDropdown === "societies"} />
               <ul className={`sub-menu ${activeDropdown === "societies" ? "show" : ""}`}>
-                <Link to="/societies/wie" onClick={closeSidebar}><li><a href="#" className="uppercase">Women In Engineering</a></li></Link>
-                {/* <Link to="/societies/ci" onClick={closeSidebar}><li><a href="#" className="uppercase">Computational Intelligence</a></li></Link> */}
-                {/* <li><a href="#" className="uppercase" onClick={closeSidebar}>Papers</a></li> */}
-                {/* <li><a href="#" className="uppercase" onClick={closeSidebar}>Magazines</a></li> */}
+                <Link to="/societies/wie" onClick={closeSidebar}><li><a href="#" onClick={(e) => e.preventDefault()}>Women in Engineering</a></li></Link>
               </ul>
             </li>
 
             <li onMouseEnter={() => handleMouseEnter("council")} onMouseLeave={handleMouseLeave}>
-              <a href="#" onClick={() => toggleDropdown("council")}>COUNCIL</a>
-              <i className={`bx bxs-chevron-down arrow ${activeDropdown === "council" ? "rotate" : ""}`}></i>
+              <a href="#" onClick={trigger("council")}>Council</a>
+              <Chevron open={activeDropdown === "council"} />
               <ul className={`sub-menu ${activeDropdown === "council" ? "show" : ""}`}>
-                <Link to="/council26-27" onClick={closeSidebar}><li><a href="#" className="uppercase">Year (26-27)</a></li></Link>
-                <Link to="/current_council" onClick={closeSidebar}><li><a href="#" className="uppercase">Year (25-26)</a></li></Link>
-                <Link to='/PreviousCouncil2425' onClick={closeSidebar}><li><a href="#" className="uppercase">Year (24-25)</a></li></Link>
-                <Link to="/previousCouncil" onClick={closeSidebar}><li><a href="#" className="uppercase">Year (23-24)</a></li></Link>
+                <Link to="/council26-27" onClick={closeSidebar}><li><a href="#" onClick={(e) => e.preventDefault()}>Year (26-27)</a></li></Link>
+                <Link to="/current_council" onClick={closeSidebar}><li><a href="#" onClick={(e) => e.preventDefault()}>Year (25-26)</a></li></Link>
+                <Link to="/PreviousCouncil2425" onClick={closeSidebar}><li><a href="#" onClick={(e) => e.preventDefault()}>Year (24-25)</a></li></Link>
+                <Link to="/previousCouncil" onClick={closeSidebar}><li><a href="#" onClick={(e) => e.preventDefault()}>Year (23-24)</a></li></Link>
               </ul>
             </li>
 
-            {/* <li onMouseEnter={() => handleMouseEnter("events")} onMouseLeave={handleMouseLeave}>
-              <a href="#" onClick={() => toggleDropdown("events")}>EVENTS</a>
-              <i className={`bx bxs-chevron-down arrow ${activeDropdown === "events" ? "rotate" : ""}`}></i>
+            <li onMouseEnter={() => handleMouseEnter("events")} onMouseLeave={handleMouseLeave}>
+              <a href="#" onClick={trigger("events")}>Events</a>
+              <Chevron open={activeDropdown === "events"} />
               <ul className={`sub-menu ${activeDropdown === "events" ? "show" : ""}`}>
-                <li><a href="#"className="uppercase"
-                      onClick={(e) => {
-                      e.preventDefault();
-                      alert("Upcoming events will be announced soon!");
-                    }}
-                    > Upcoming
-                    </a>
-                </li>
-                <Link to="/events" onClick={closeSidebar}><li><a href="#" className="uppercase">Past</a></li></Link>
-
-              </ul>
-            </li> */}
-
-            <li
-              onMouseEnter={() => handleMouseEnter("events")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button
-                className="flex items-center gap-1 uppercase"
-                onClick={() => toggleDropdown("events")}
-              >
-                EVENTS
-                <i
-                  className={`bx bxs-chevron-down arrow ${
-                    activeDropdown === "events" ? "rotate" : ""
-                  }`}
-                ></i>
-              </button>
-
-              <ul className={`sub-menu ${activeDropdown === "events" ? "show" : ""}`}>
-                {/* 🔹 Upcoming Event → Membership Drive */}
+                {/* Upcoming event → Membership Drive */}
                 <li>
-                  <Link to="/join_ieee" onClick={closeSidebar} className="uppercase">
+                  <Link to="/join_ieee" onClick={closeSidebar}>
                     Upcoming (Membership Drive 26-27)
                   </Link>
                 </li>
-
-                {/* 🔹 Past Events */}
+                {/* Past events */}
                 <li>
-                  <Link to="/events" onClick={closeSidebar} className="uppercase">
+                  <Link to="/events" onClick={closeSidebar}>
                     Past
                   </Link>
                 </li>
               </ul>
             </li>
 
+            <Link to="/developers" onClick={closeSidebar}><li><a href="#" onClick={(e) => e.preventDefault()}>Developers</a></li></Link>
+            <Link to="/contact" onClick={closeSidebar}><li><a href="#" onClick={(e) => e.preventDefault()}>Contact</a></li></Link>
 
-
-            <Link to="/developers" onClick={closeSidebar}><li><a href="#" onClick={closeSidebar}>DEVELOPERS</a></li></Link>
-            <Link to="/contact" onClick={closeSidebar}><li><a href="#" onClick={closeSidebar}>CONTACT</a></li></Link>
-            {/* <li className="bg-[color:--color3] hover:!bg-[color:--white] duration-500 cursor-not-allowed">
-                <a href="#"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      closeSidebar();
-                      alert("Registration will open soon!");
-                    }}
-                  >
-                    <i className="fa-solid fa-arrow-pointer"></i> REGISTER
-                </a>
-            </li> */}
-            <li className="bg-[color:--color3] hover:!bg-[color:--white] duration-500">
+            <li className="nav-actions">
+              <ThemeToggle />
               <a
-                href="https://forms.gle/gPrA2sc8sUVoVxbY8" // replace with your actual Google Form link
+                className="nav-register"
+                href="https://forms.gle/gPrA2sc8sUVoVxbY8"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeSidebar}
               >
-                <i className="fa-solid fa-arrow-pointer"></i> Register
+                Register
               </a>
+              <Link to="/join_ieee" onClick={closeSidebar} className="nav-join">
+                Join IEEE
+              </Link>
             </li>
-
-            <Link to="/join_ieee" onClick={closeSidebar}><li className="bg-[color:--color2] hover:!bg-[color:--white] duration-500"><a href="#" onClick={closeSidebar}><i class="fa-solid fa-hat-cowboy"></i> JOIN IEEE</a></li></Link>
           </ul>
         </div>
       </div>

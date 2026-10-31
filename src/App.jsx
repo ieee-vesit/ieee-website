@@ -9,6 +9,7 @@ import Footer from "./components/footer/Footer";
 import ContactPage from "./pages/ContactPage";
 import JoinPage from "./pages/JoinPage";
 import ScrollToTop from "./ScrollToTop";
+import PageTransition from "./theme/PageTransition";
 import PrevCouncil1 from './pages/PrevCouncil1';
 import Developers from './pages/Developers';
 import WIE from './pages/WIE/WIE';
@@ -52,6 +53,7 @@ function App() {
     <Router>
       <Navbar />
       <ScrollToTop />
+      <PageTransition>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/council26-27" element={<CurrentCouncil2627 />} />
@@ -97,6 +99,7 @@ function App() {
 
 
       </Routes>
+      </PageTransition>
       <Footer />
     </Router>
   );

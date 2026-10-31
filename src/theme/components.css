@@ -1,0 +1,220 @@
+/* ==========================================================================
+   Component restyle — loaded after every component stylesheet, so these win.
+   Structure and behaviour are untouched; only surfaces, type and motion change.
+   ========================================================================== */
+
+/* ---------- panels: one frosted recipe, reused ---------- */
+
+.card,
+.provideCard,
+.testimonial-card,
+.translucent-box,
+.event-card,
+.ec-card,
+.ec-sidebar-item,
+.membership-card,
+.community-stats-card,
+.faq-item {
+  position: relative;
+  background: var(--glass) !important;
+  border: 1px solid var(--glass-line) !important;
+  box-shadow: var(--glass-shadow) !important;
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(150%);
+  backdrop-filter: blur(var(--blur)) saturate(150%);
+  color: var(--ink);
+  transition: transform var(--t) var(--ease), box-shadow var(--t) var(--ease), background var(--t) var(--ease) !important;
+}
+.card:hover,
+.provideCard:hover,
+.testimonial-card:hover,
+.event-card:hover,
+.ec-card:hover,
+.membership-card:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: var(--glass-shadow-hover) !important;
+}
+/* pointer highlight overlay for panels that are not .glass */
+.card::after,
+.provideCard::after,
+.testimonial-card::after,
+.translucent-box::after,
+.event-card::after,
+.ec-card::after,
+.membership-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(340px circle at var(--mx, 50%) var(--my, 0%), var(--sheen), transparent 62%);
+  transition: opacity var(--t) var(--ease);
+}
+.card:hover::after,
+.provideCard:hover::after,
+.testimonial-card:hover::after,
+.translucent-box:hover::after,
+.event-card:hover::after,
+.ec-card:hover::after,
+.membership-card:hover::after { opacity: 1; }
+
+.card, .provideCard, .testimonial-card, .event-card, .ec-card, .membership-card { border-radius: var(--r-l) !important; }
+.translucent-box { border-radius: var(--r-m) !important; }
+
+/* ---------- hero slider ---------- */
+
+.nextPrevArrows { bottom: 8% !important; gap: 8px !important; padding: 6px; border-radius: 999px; background: var(--glass); border: 1px solid var(--glass-line); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+.nextPrevArrows button {
+  width: 46px !important;
+  height: 38px !important;
+  border-radius: 999px !important;
+  background: transparent !important;
+  color: var(--ink) !important;
+  font-weight: 600 !important;
+  transition: background var(--t) var(--ease), transform var(--t-fast) var(--ease) !important;
+}
+.nextPrevArrows button:hover { background: var(--accent) !important; color: var(--accent-ink) !important; }
+.nextPrevArrows button:active { transform: scale(0.94); }
+.slider .list .item img { box-shadow: none !important; }
+.slider .list .item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(0,0,0,0.12), transparent 22%, transparent 70%, color-mix(in srgb, var(--bg) 70%, transparent));
+}
+
+/* ---------- about ---------- */
+
+.about { background: transparent !important; }
+.h1, .h2, .h3,
+.about h1, .about h2, .about h3 {
+  font-family: var(--font) !important;
+  text-transform: none !important;
+  letter-spacing: -0.02em !important;
+  font-weight: 650 !important;
+  color: var(--ink) !important;
+}
+.translucent-box { padding: clamp(18px, 2.4vw, 30px); }
+.p1, .p2, .p3, .para1, .para2, .para3 { color: var(--ink-2) !important; }
+.pic1 img, .pic2 img, .pic3 img {
+  border-radius: var(--r-m);
+  background: #fff;
+  box-shadow: 0 14px 34px -18px rgba(13, 24, 34, 0.45);
+}
+
+/* ---------- "What we provide" ---------- */
+
+.provide-main-wrapper { background: transparent !important; }
+.provide-title-text,
+.testimonials-heading {
+  font-family: var(--font) !important;
+  text-transform: none !important;
+  letter-spacing: -0.02em !important;
+  font-weight: 650 !important;
+  font-size: var(--h2) !important;
+  color: var(--ink) !important;
+}
+.provideCard { overflow: hidden; }
+.provide-grid-container .provideCard h3,
+.provide-grid-container .provideCard .card-title,
+.provide-grid-container .provideCard .provide-svg-icon { color: var(--ink) !important; font-weight: 650 !important; letter-spacing: -0.01em !important; font-size: clamp(1.25rem, 1.8vw, 1.6rem) !important; }
+.provide-grid-container .provideCard p,
+.provide-grid-container .provideCard .card-content { color: var(--ink-2) !important; background: var(--glass) !important; font-weight: 500 !important; }
+.provideCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, var(--accent-soft), transparent 55%);
+  pointer-events: none;
+}
+.provideCard svg, .provideCard i, .provideCard img { transition: transform 0.6s var(--ease); }
+.provideCard:hover svg, .provideCard:hover i { transform: translateY(-4px) scale(1.06); }
+
+/* ---------- testimonials ---------- */
+
+.testimonials-section { background: transparent !important; }
+.testimonial-card.card-bg-0, .testimonial-card.card-bg-1, .testimonial-card.card-bg-2, .testimonial-card.card-bg-3 {
+  background: var(--glass) !important;
+}
+.testimonial-name { color: var(--ink) !important; }
+.testimonial-branch { color: var(--ink-3) !important; }
+.testimonial-text { color: var(--ink-2) !important; }
+.quote-mark { color: var(--accent) !important; opacity: 0.5; }
+.image-wrapper { border-color: var(--glass-strong) !important; background: var(--glass-strong) !important; }
+
+/* ---------- people cards ---------- */
+
+.card .hover-box,
+.card .icons-box { background: transparent !important; }
+.card h1, .card h2, .card h3, .card h4, .card p, .card span { color: var(--ink) !important; }
+.card p { color: var(--ink-2) !important; }
+.card i, .card svg { color: var(--ink-2); transition: color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease); }
+.card i:hover, .card svg:hover { color: var(--accent); transform: translateY(-2px); }
+
+/* ---------- footer ---------- */
+
+footer {
+  background: var(--glass) !important;
+  border-top: 1px solid var(--glass-line);
+  -webkit-backdrop-filter: blur(var(--blur));
+  backdrop-filter: blur(var(--blur));
+  color: var(--ink);
+}
+footer .border-t { border-color: var(--hairline) !important; }
+footer small, footer p, footer li, footer a { color: var(--ink-2); }
+footer small:hover, footer a:hover small { color: var(--accent) !important; transition: color var(--t-fast) var(--ease); }
+footer h2 { color: var(--ink) !important; }
+/* the footer mark is a dark artwork; flip it on dark backgrounds */
+[data-theme="dark"] footer img[alt="IEEE-VESIT Logo"] { filter: invert(1) hue-rotate(180deg); }
+
+/* ---------- generic content surfaces ---------- */
+
+section, main { color: var(--ink); }
+
+/* Tailwind utility classes used in a few pages, mapped onto the theme */
+[data-theme="dark"] .bg-white { background-color: var(--white) !important; }
+[data-theme="dark"] .bg-gray-50,
+[data-theme="dark"] .bg-gray-100,
+[data-theme="dark"] .bg-gray-200,
+[data-theme="dark"] .bg-gray-300 { background-color: var(--glass) !important; }
+[data-theme="dark"] .bg-blue-100,
+[data-theme="dark"] .bg-blue-200 { background-color: var(--accent-soft) !important; }
+[data-theme="dark"] .text-black,
+[data-theme="dark"] .text-gray-900,
+[data-theme="dark"] .text-gray-800,
+[data-theme="dark"] .text-gray-700 { color: var(--ink) !important; }
+[data-theme="dark"] .text-gray-600,
+[data-theme="dark"] .text-gray-500 { color: var(--ink-2) !important; }
+[data-theme="dark"] .border-gray-100,
+[data-theme="dark"] .border-gray-200,
+[data-theme="dark"] .border-gray-300 { border-color: var(--hairline) !important; }
+
+/* ---------- forms ---------- */
+
+input, textarea, select {
+  background: var(--glass-strong);
+  color: var(--ink);
+  border: 1px solid var(--hairline);
+  border-radius: var(--r-s);
+  transition: border-color var(--t-fast) var(--ease), box-shadow var(--t-fast) var(--ease);
+}
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+input::placeholder, textarea::placeholder { color: var(--ink-3); }
+
+/* ---------- buttons found across pages ---------- */
+
+button:not(.theme-toggle):not(.nav-burger):not(.nav-close) { transition: background var(--t) var(--ease), color var(--t) var(--ease), transform var(--t-fast) var(--ease); }
+
+/* ---------- event tags ---------- */
+.ec-tag { letter-spacing: 0.02em !important; text-transform: none !important; color: var(--ink) !important; border: 1px solid var(--hairline); }
+.tag-workshop   { background: color-mix(in srgb, #3fb37f 22%, transparent) !important; }
+.tag-competition{ background: color-mix(in srgb, #e5706a 22%, transparent) !important; }
+.tag-talk       { background: color-mix(in srgb, #e0b43a 24%, transparent) !important; }
+.tag-hackathon  { background: color-mix(in srgb, #6f7df0 24%, transparent) !important; }
+footer .border-t { border-color: var(--hairline) !important; }
+footer hr, footer .border-b { border-color: var(--hairline) !important; background: var(--hairline) !important; }

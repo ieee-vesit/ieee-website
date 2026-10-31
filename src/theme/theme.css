@@ -1,0 +1,285 @@
+/* ==========================================================================
+   IEEE VESIT — design tokens, base and shared surfaces
+   Direction: quiet pages, frosted panels. Colour comes from the IEEE blue and
+   from whatever sits behind the glass; nothing else is decorated.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* type — one family, hierarchy comes from weight and size */
+  --font: "Hanken Grotesk Variable", "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --poppins: var(--font);
+
+  --h1: clamp(2.4rem, 4.6vw, 3.6rem);
+  --h2: clamp(1.8rem, 3.2vw, 2.5rem);
+  --h3: clamp(1.25rem, 2.1vw, 1.55rem);
+  --p: clamp(1rem, 1.1vw, 1.07rem);
+  --small: 0.94rem;
+
+  /* page */
+  --bg: #edf1f4;
+  --field-a: rgba(150, 205, 214, 0.55);
+  --field-b: rgba(128, 166, 207, 0.42);
+  --field-c: rgba(190, 214, 226, 0.6);
+
+  /* text */
+  --ink: #0d1822;
+  --ink-2: #435568;
+  --ink-3: #75869a;
+
+  /* brand */
+  --accent: #00629b;
+  --accent-hi: #0a79bb;
+  --accent-ink: #ffffff;
+  --accent-soft: rgba(0, 98, 155, 0.11);
+
+  /* frosted surfaces */
+  --glass: rgba(255, 255, 255, 0.58);
+  --glass-strong: rgba(255, 255, 255, 0.8);
+  --glass-line: rgba(255, 255, 255, 0.78);
+  --glass-edge: rgba(13, 24, 34, 0.07);
+  --glass-shadow: 0 1px 0 rgba(255, 255, 255, 0.75) inset, 0 12px 34px -14px rgba(13, 24, 34, 0.2);
+  --glass-shadow-hover: 0 1px 0 rgba(255, 255, 255, 0.8) inset, 0 22px 44px -16px rgba(13, 24, 34, 0.28);
+  --sheen: rgba(255, 255, 255, 0.7);
+  --blur: 18px;
+  --hairline: rgba(13, 24, 34, 0.1);
+
+  /* shape — three radii, used by role, not everywhere */
+  --r-s: 10px;
+  --r-m: 18px;
+  --r-l: 26px;
+
+  /* motion */
+  --ease: cubic-bezier(0.22, 0.8, 0.24, 1);
+  --t-fast: 0.18s;
+  --t: 0.38s;
+
+  /* older variables the site still uses, remapped to this system */
+  --white: #ffffff;
+  --black: #0d1822;
+  --color1: #e4f1f1;
+  --color2: #c4e3e8;
+  --color3: #3f8fba;
+  --color4: #3c587f;
+  --light-blue: #e8f4f3;
+  --senior-council: #fff8ec;
+  --junior-council: #d0f4de;
+  --se: #fcd5d2;
+  --faculty: #a8b2ff;
+  --blue: #85cbda;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #090f15;
+  --field-a: rgba(24, 92, 112, 0.42);
+  --field-b: rgba(32, 62, 112, 0.46);
+  --field-c: rgba(18, 70, 84, 0.34);
+
+  --ink: #e8eef4;
+  --ink-2: #aab9c8;
+  --ink-3: #74869a;
+
+  --accent: #4db3ea;
+  --accent-hi: #7accf5;
+  --accent-ink: #04202f;
+  --accent-soft: rgba(77, 179, 234, 0.14);
+
+  --glass: rgba(21, 32, 43, 0.58);
+  --glass-strong: rgba(26, 39, 52, 0.82);
+  --glass-line: rgba(255, 255, 255, 0.1);
+  --glass-edge: rgba(0, 0, 0, 0.35);
+  --glass-shadow: 0 1px 0 rgba(255, 255, 255, 0.07) inset, 0 14px 38px -14px rgba(0, 0, 0, 0.65);
+  --glass-shadow-hover: 0 1px 0 rgba(255, 255, 255, 0.1) inset, 0 24px 48px -16px rgba(0, 0, 0, 0.8);
+  --sheen: rgba(150, 205, 240, 0.16);
+  --hairline: rgba(255, 255, 255, 0.1);
+
+  --white: #0e1620;
+  --black: #e8eef4;
+  --color1: #16262d;
+  --color2: #1b3340;
+  --color3: #5aaedb;
+  --color4: #a9c2e2;
+  --light-blue: #14242a;
+}
+
+/* ---------- base ---------- */
+
+html {
+  background: var(--bg);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* The soft colour behind the glass. Fixed, so panels have something to blur. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(58vw 52vh at 6% 2%, var(--field-a), transparent 72%),
+    radial-gradient(52vw 56vh at 100% 38%, var(--field-b), transparent 72%),
+    radial-gradient(60vw 48vh at 28% 104%, var(--field-c), transparent 72%);
+}
+
+/* Every text face on the site, except the icon fonts. */
+*:not(i):not([class*="fa-"]):not([class*="bx"]):not(.fa):not(.fas):not(.fab):not(.far) {
+  font-family: var(--font) !important;
+}
+
+h1, h2, h3, h4 {
+  color: var(--ink);
+  font-weight: 650;
+  letter-spacing: -0.022em;
+  line-height: 1.14;
+}
+h1 { font-size: var(--h1); }
+h2 { font-size: var(--h2); }
+h3 { font-size: var(--h3); }
+p  { color: var(--ink-2); line-height: 1.68; }
+a  { color: inherit; }
+small { color: inherit; }
+
+::selection { background: var(--accent); color: var(--accent-ink); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+img { -webkit-user-drag: none; }
+
+/* slim, quiet scrollbar */
+* { scrollbar-width: thin; scrollbar-color: var(--hairline) transparent; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: var(--hairline); border-radius: 10px; border: 3px solid transparent; background-clip: content-box; }
+
+/* ---------- shared frosted surface ---------- */
+
+.glass {
+  position: relative;
+  background: var(--glass);
+  border: 1px solid var(--glass-line);
+  box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(150%);
+  backdrop-filter: blur(var(--blur)) saturate(150%);
+}
+
+/* A soft highlight that follows the pointer across a panel (see effects.js). */
+.glass::after,
+.has-sheen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(340px circle at var(--mx, 50%) var(--my, 0%), var(--sheen), transparent 62%);
+  transition: opacity var(--t) var(--ease);
+}
+.glass:hover::after,
+.has-sheen:hover::after { opacity: 1; }
+
+/* ---------- buttons ---------- */
+
+.btn,
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.62rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: var(--small);
+  line-height: 1.2;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform var(--t-fast) var(--ease), background var(--t) var(--ease), color var(--t) var(--ease), box-shadow var(--t) var(--ease);
+}
+.btn { background: var(--accent); color: var(--accent-ink); border: 1px solid transparent; }
+.btn:hover { background: var(--accent-hi); transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--hairline); }
+.btn-ghost:hover { background: var(--accent-soft); border-color: transparent; }
+
+/* ---------- theme toggle ---------- */
+
+.theme-toggle {
+  position: relative;
+  flex: none;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--glass-line);
+  background: var(--glass);
+  color: var(--ink);
+  cursor: pointer;
+  transition: background var(--t) var(--ease), transform var(--t-fast) var(--ease);
+}
+.theme-toggle:hover { background: var(--accent-soft); }
+.theme-toggle:active { transform: scale(0.94); }
+.theme-toggle svg {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  transition: transform 0.5s var(--ease), opacity 0.3s var(--ease);
+}
+.theme-toggle .icon-sun  { opacity: 1; transform: rotate(0) scale(1); }
+.theme-toggle .icon-moon { opacity: 0; transform: rotate(-70deg) scale(0.5); }
+:root[data-theme="dark"] .theme-toggle .icon-sun  { opacity: 0; transform: rotate(70deg) scale(0.5); }
+:root[data-theme="dark"] .theme-toggle .icon-moon { opacity: 1; transform: rotate(0) scale(1); }
+
+/* The theme change grows out of the button as a circle (View Transitions). */
+::view-transition-old(root),
+::view-transition-new(root) { animation: none; mix-blend-mode: normal; }
+::view-transition-old(root) { z-index: 1; }
+::view-transition-new(root) { z-index: 2; }
+
+/* ---------- movement between pages ---------- */
+
+.page-enter {
+  animation: page-in 0.5s var(--ease) both;
+}
+@keyframes page-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Cards that start below the fold settle in as they arrive. Added by effects.js. */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  transition-delay: var(--d, 0ms);
+}
+.reveal.in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
