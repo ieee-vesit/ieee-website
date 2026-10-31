@@ -128,7 +128,7 @@ const Navbar = () => {
           </div>
 
           <ul className="links">
-            <Link to="/" onClick={closeSidebar}><li><a href="#" onClick={(e) => e.preventDefault()}>Home</a></li></Link>
+            <Link to="/" onClick={closeSidebar}><li><a href="#">Home</a></li></Link>
 
             <li onMouseEnter={() => handleMouseEnter("ieee")} onMouseLeave={handleMouseLeave}>
               <a href="#" onClick={trigger("ieee")}>IEEE</a>
@@ -143,7 +143,7 @@ const Navbar = () => {
               <a href="#" onClick={trigger("societies")}>Societies</a>
               <Chevron open={activeDropdown === "societies"} />
               <ul className={`sub-menu ${activeDropdown === "societies" ? "show" : ""}`}>
-                <Link to="/societies/wie" onClick={closeSidebar}><li><a href="#" onClick={(e) => e.preventDefault()}>Women in Engineering</a></li></Link>
+                <Link to="/societies/wie" onClick={closeSidebar}><li><a href="#">Women in Engineering</a></li></Link>
               </ul>
             </li>
 
@@ -151,10 +151,10 @@ const Navbar = () => {
               <a href="#" onClick={trigger("council")}>Council</a>
               <Chevron open={activeDropdown === "council"} />
               <ul className={`sub-menu ${activeDropdown === "council" ? "show" : ""}`}>
-                <Link to="/council26-27" onClick={closeSidebar}><li><a href="#" onClick={(e) => e.preventDefault()}>Year (26-27)</a></li></Link>
-                <Link to="/current_council" onClick={closeSidebar}><li><a href="#" onClick={(e) => e.preventDefault()}>Year (25-26)</a></li></Link>
-                <Link to="/PreviousCouncil2425" onClick={closeSidebar}><li><a href="#" onClick={(e) => e.preventDefault()}>Year (24-25)</a></li></Link>
-                <Link to="/previousCouncil" onClick={closeSidebar}><li><a href="#" onClick={(e) => e.preventDefault()}>Year (23-24)</a></li></Link>
+                <Link to="/council26-27" onClick={closeSidebar}><li><a href="#">Year (26-27)</a></li></Link>
+                <Link to="/current_council" onClick={closeSidebar}><li><a href="#">Year (25-26)</a></li></Link>
+                <Link to="/PreviousCouncil2425" onClick={closeSidebar}><li><a href="#">Year (24-25)</a></li></Link>
+                <Link to="/previousCouncil" onClick={closeSidebar}><li><a href="#">Year (23-24)</a></li></Link>
               </ul>
             </li>
 
@@ -177,8 +177,8 @@ const Navbar = () => {
               </ul>
             </li>
 
-            <Link to="/developers" onClick={closeSidebar}><li><a href="#" onClick={(e) => e.preventDefault()}>Developers</a></li></Link>
-            <Link to="/contact" onClick={closeSidebar}><li><a href="#" onClick={(e) => e.preventDefault()}>Contact</a></li></Link>
+            <Link to="/developers" onClick={closeSidebar}><li><a href="#">Developers</a></li></Link>
+            <Link to="/contact" onClick={closeSidebar}><li><a href="#">Contact</a></li></Link>
 
             <li className="nav-actions">
               <ThemeToggle />

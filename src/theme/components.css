@@ -19,8 +19,8 @@
   background: var(--glass) !important;
   border: 1px solid var(--glass-line) !important;
   box-shadow: var(--glass-shadow) !important;
-  -webkit-backdrop-filter: blur(var(--blur)) saturate(150%);
-  backdrop-filter: blur(var(--blur)) saturate(150%);
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(180%);
+  backdrop-filter: blur(var(--blur)) saturate(180%);
   color: var(--ink);
   transition: transform var(--t) var(--ease), box-shadow var(--t) var(--ease), background var(--t) var(--ease) !important;
 }
@@ -125,7 +125,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, var(--accent-soft), transparent 55%);
+  background: var(--gloss);
+  border-radius: inherit;
   pointer-events: none;
 }
 .provideCard svg, .provideCard i, .provideCard img { transition: transform 0.6s var(--ease); }
@@ -218,3 +219,58 @@ button:not(.theme-toggle):not(.nav-burger):not(.nav-close) { transition: backgro
 .tag-hackathon  { background: color-mix(in srgb, #6f7df0 24%, transparent) !important; }
 footer .border-t { border-color: var(--hairline) !important; }
 footer hr, footer .border-b { border-color: var(--hairline) !important; background: var(--hairline) !important; }
+
+/* ---------- gloss: a slanted specular streak across every frosted panel ---------- */
+.card::before,
+.testimonial-card::before,
+.translucent-box::before,
+.event-card::before,
+.ec-card::before,
+.ec-sidebar-item::before,
+.membership-card::before,
+.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: var(--gloss);
+  pointer-events: none;
+  z-index: 0;
+}
+.provideCard::before { z-index: 0; }
+.nav-burger, .theme-toggle { box-shadow: var(--glass-shadow); }
+nav.navbar-shell { box-shadow: 0 1px 0 rgba(255,255,255,0.55) inset; }
+[data-theme="dark"] nav.navbar-shell { box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset; }
+nav.navbar-shell .navbar .links li .sub-menu { background: var(--glass-strong); }
+nav.navbar-shell .navbar .links li .sub-menu::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: var(--gloss); pointer-events: none; }
+.nav-join { box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset, 0 8px 18px -8px var(--accent); }
+.btn { box-shadow: 0 1px 0 rgba(255,255,255,0.35) inset, 0 8px 18px -8px var(--accent); }
+
+/* ---------- contact page (Forms) ---------- */
+.borderRadius-12 {
+  border-radius: var(--r-m) !important;
+}
+.custom-shadow { box-shadow: var(--glass-shadow) !important; }
+section .borderRadius-12.custom-shadow,
+.borderRadius-12.group,
+div.bg-white.borderRadius-12 {
+  position: relative;
+  background: var(--glass) !important;
+  border: 1px solid var(--glass-line) !important;
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(180%);
+  backdrop-filter: blur(var(--blur)) saturate(180%);
+}
+.borderRadius-12.group::before,
+div.bg-white.borderRadius-12::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  background: var(--gloss); pointer-events: none;
+}
+.borderRadius-12.group:hover { box-shadow: var(--glass-shadow-hover) !important; border-color: var(--glass-line) !important; }
+.borderRadius-12.group > .absolute { display: none; }
+.borderRadius-12.group h3 { color: var(--ink) !important; }
+.borderRadius-12.group p { color: var(--ink-2) !important; opacity: 1 !important; }
+.borderRadius-12.group .bg-white, .borderRadius-12.group a.bg-white { background: var(--glass-strong) !important; color: var(--ink); }
+.borderRadius-12.group a, .borderRadius-12.group a i { color: var(--ink-2) !important; }
+.borderRadius-12.group a:hover i { color: var(--accent) !important; }
+label { color: var(--ink-2) !important; }
+.cardx { background: var(--glass) !important; border: 1px solid var(--glass-line); border-radius: var(--r-m); box-shadow: var(--glass-shadow); }

@@ -19,9 +19,10 @@
 
   /* page */
   --bg: #edf1f4;
-  --field-a: rgba(150, 205, 214, 0.55);
-  --field-b: rgba(128, 166, 207, 0.42);
-  --field-c: rgba(190, 214, 226, 0.6);
+  --field-a: rgba(96, 196, 214, 0.62);
+  --field-b: rgba(104, 146, 230, 0.5);
+  --field-c: rgba(150, 214, 226, 0.7);
+  --field-d: rgba(176, 150, 238, 0.32);
 
   /* text */
   --ink: #0d1822;
@@ -35,14 +36,15 @@
   --accent-soft: rgba(0, 98, 155, 0.11);
 
   /* frosted surfaces */
-  --glass: rgba(255, 255, 255, 0.58);
-  --glass-strong: rgba(255, 255, 255, 0.8);
-  --glass-line: rgba(255, 255, 255, 0.78);
+  --glass: linear-gradient(140deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.36));
+  --glass-strong: linear-gradient(140deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.66));
+  --glass-line: rgba(255, 255, 255, 0.9);
+  --gloss: linear-gradient(118deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.12) 26%, transparent 46%);
   --glass-edge: rgba(13, 24, 34, 0.07);
-  --glass-shadow: 0 1px 0 rgba(255, 255, 255, 0.75) inset, 0 12px 34px -14px rgba(13, 24, 34, 0.2);
-  --glass-shadow-hover: 0 1px 0 rgba(255, 255, 255, 0.8) inset, 0 22px 44px -16px rgba(13, 24, 34, 0.28);
+  --glass-shadow: 0 1.5px 0 rgba(255, 255, 255, 1) inset, 0 -1px 0 rgba(255, 255, 255, 0.35) inset, 0 16px 40px -14px rgba(20, 60, 90, 0.28);
+  --glass-shadow-hover: 0 1.5px 0 rgba(255, 255, 255, 1) inset, 0 -1px 0 rgba(255, 255, 255, 0.4) inset, 0 26px 50px -16px rgba(20, 60, 90, 0.36);
   --sheen: rgba(255, 255, 255, 0.7);
-  --blur: 18px;
+  --blur: 24px;
   --hairline: rgba(13, 24, 34, 0.1);
 
   /* shape — three radii, used by role, not everywhere */
@@ -74,9 +76,10 @@
   color-scheme: dark;
 
   --bg: #090f15;
-  --field-a: rgba(24, 92, 112, 0.42);
-  --field-b: rgba(32, 62, 112, 0.46);
-  --field-c: rgba(18, 70, 84, 0.34);
+  --field-a: rgba(24, 120, 146, 0.5);
+  --field-b: rgba(44, 82, 160, 0.52);
+  --field-c: rgba(18, 94, 110, 0.4);
+  --field-d: rgba(96, 70, 170, 0.3);
 
   --ink: #e8eef4;
   --ink-2: #aab9c8;
@@ -87,12 +90,13 @@
   --accent-ink: #04202f;
   --accent-soft: rgba(77, 179, 234, 0.14);
 
-  --glass: rgba(21, 32, 43, 0.58);
-  --glass-strong: rgba(26, 39, 52, 0.82);
-  --glass-line: rgba(255, 255, 255, 0.1);
+  --glass: linear-gradient(140deg, rgba(60, 86, 112, 0.5), rgba(18, 28, 40, 0.5));
+  --glass-strong: linear-gradient(140deg, rgba(48, 70, 94, 0.92), rgba(20, 31, 44, 0.9));
+  --glass-line: rgba(255, 255, 255, 0.17);
+  --gloss: linear-gradient(118deg, rgba(190, 225, 255, 0.2) 0%, rgba(190, 225, 255, 0.05) 26%, transparent 46%);
   --glass-edge: rgba(0, 0, 0, 0.35);
-  --glass-shadow: 0 1px 0 rgba(255, 255, 255, 0.07) inset, 0 14px 38px -14px rgba(0, 0, 0, 0.65);
-  --glass-shadow-hover: 0 1px 0 rgba(255, 255, 255, 0.1) inset, 0 24px 48px -16px rgba(0, 0, 0, 0.8);
+  --glass-shadow: 0 1.5px 0 rgba(255, 255, 255, 0.2) inset, 0 -1px 0 rgba(255, 255, 255, 0.04) inset, 0 16px 40px -14px rgba(0, 0, 0, 0.7);
+  --glass-shadow-hover: 0 1.5px 0 rgba(255, 255, 255, 0.28) inset, 0 -1px 0 rgba(255, 255, 255, 0.06) inset, 0 26px 50px -16px rgba(0, 0, 0, 0.85);
   --sheen: rgba(150, 205, 240, 0.16);
   --hairline: rgba(255, 255, 255, 0.1);
 
@@ -114,7 +118,7 @@ html {
 }
 
 body {
-  background: var(--bg);
+  background: transparent;
   color: var(--ink);
   font-family: var(--font);
   line-height: 1.6;
@@ -134,7 +138,8 @@ body::before {
   background:
     radial-gradient(58vw 52vh at 6% 2%, var(--field-a), transparent 72%),
     radial-gradient(52vw 56vh at 100% 38%, var(--field-b), transparent 72%),
-    radial-gradient(60vw 48vh at 28% 104%, var(--field-c), transparent 72%);
+    radial-gradient(60vw 48vh at 28% 104%, var(--field-c), transparent 72%),
+    radial-gradient(40vw 40vh at 62% 8%, var(--field-d), transparent 70%);
 }
 
 /* Every text face on the site, except the icon fonts. */
@@ -177,8 +182,8 @@ img { -webkit-user-drag: none; }
   background: var(--glass);
   border: 1px solid var(--glass-line);
   box-shadow: var(--glass-shadow);
-  -webkit-backdrop-filter: blur(var(--blur)) saturate(150%);
-  backdrop-filter: blur(var(--blur)) saturate(150%);
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(180%);
+  backdrop-filter: blur(var(--blur)) saturate(180%);
 }
 
 /* A soft highlight that follows the pointer across a panel (see effects.js). */
