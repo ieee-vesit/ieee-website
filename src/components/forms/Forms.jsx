@@ -32,6 +32,9 @@ const teamMembers = [
   {
     name: "Akash Murthy",
     role: "Senior Operations Head",
+    email: "murthyakash7081@gmail.com",
+    linkedin: "https://www.linkedin.com/in/akash-murthy-373118306",
+    github: "https://github.com/Leon2396",
     img: akash,
     color: "var(--color1)",
   },
