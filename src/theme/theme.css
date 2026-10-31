@@ -179,7 +179,7 @@ img { -webkit-user-drag: none; }
 
 .glass {
   position: relative;
-  background: var(--glass);
+  background: var(--gloss), var(--glass);
   border: 1px solid var(--glass-line);
   box-shadow: var(--glass-shadow);
   -webkit-backdrop-filter: blur(var(--blur)) saturate(180%);

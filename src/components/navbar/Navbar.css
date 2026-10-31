@@ -124,7 +124,8 @@ nav.navbar-shell .navbar .links li .sub-menu {
   border-radius: var(--r-m);
   background: var(--glass-strong);
   border: 1px solid var(--glass-line);
-  box-shadow: var(--glass-shadow-hover);
+  box-shadow: var(--glass-shadow-hover), 0 1px 0 rgba(255,255,255,0.6) inset;
+  background-image: var(--gloss);
   -webkit-backdrop-filter: blur(var(--blur)) saturate(160%);
   backdrop-filter: blur(var(--blur)) saturate(160%);
   opacity: 0;

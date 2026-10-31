@@ -16,7 +16,7 @@
 .community-stats-card,
 .faq-item {
   position: relative;
-  background: var(--glass) !important;
+  background: var(--gloss), var(--glass) !important;
   border: 1px solid var(--glass-line) !important;
   box-shadow: var(--glass-shadow) !important;
   -webkit-backdrop-filter: blur(var(--blur)) saturate(180%);
@@ -120,7 +120,7 @@
 .provide-grid-container .provideCard .card-title,
 .provide-grid-container .provideCard .provide-svg-icon { color: var(--ink) !important; font-weight: 650 !important; letter-spacing: -0.01em !important; font-size: clamp(1.25rem, 1.8vw, 1.6rem) !important; }
 .provide-grid-container .provideCard p,
-.provide-grid-container .provideCard .card-content { color: var(--ink-2) !important; background: var(--glass) !important; font-weight: 500 !important; }
+.provide-grid-container .provideCard .card-content { color: var(--ink-2) !important; background: var(--glass-strong) !important; font-weight: 500 !important; }
 .provideCard::before {
   content: "";
   position: absolute;
@@ -136,7 +136,7 @@
 
 .testimonials-section { background: transparent !important; }
 .testimonial-card.card-bg-0, .testimonial-card.card-bg-1, .testimonial-card.card-bg-2, .testimonial-card.card-bg-3 {
-  background: var(--glass) !important;
+  background: var(--gloss), var(--glass) !important;
 }
 .testimonial-name { color: var(--ink) !important; }
 .testimonial-branch { color: var(--ink-3) !important; }
