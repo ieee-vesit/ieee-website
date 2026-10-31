@@ -63,27 +63,46 @@
 .card, .provideCard, .testimonial-card, .event-card, .ec-card, .membership-card { border-radius: var(--r-l) !important; }
 .translucent-box { border-radius: var(--r-m) !important; }
 
-/* ---------- hero slider ---------- */
+/* ---------- hero slider: a plain framed picture, whole image visible, no glass ---------- */
 
-.nextPrevArrows { bottom: 8% !important; gap: 8px !important; padding: 6px; border-radius: 999px; background: var(--glass); border: 1px solid var(--glass-line); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+.slider {
+  width: min(1080px, calc(100% - 36px)) !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+  margin: 92px auto 0 !important;
+  border-radius: var(--r-l);
+  border: 1px solid var(--hairline);
+  background: color-mix(in srgb, var(--ink) 7%, var(--bg));
+  box-shadow: 0 18px 44px -24px rgba(13, 24, 34, 0.5);
+  overflow: hidden;
+}
+.slider .list .item { background: color-mix(in srgb, var(--ink) 7%, var(--bg)); }
+.slider .list .item img {
+  object-fit: contain !important;
+  box-shadow: none !important;
+}
+.nextPrevArrows {
+  bottom: 14px !important;
+  gap: 8px !important;
+  padding: 0;
+  background: none;
+  border: 0;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
 .nextPrevArrows button {
-  width: 46px !important;
-  height: 38px !important;
+  width: 42px !important;
+  height: 34px !important;
   border-radius: 999px !important;
-  background: transparent !important;
-  color: var(--ink) !important;
+  background: rgba(13, 24, 34, 0.62) !important;
+  color: #fff !important;
   font-weight: 600 !important;
   transition: background var(--t) var(--ease), transform var(--t-fast) var(--ease) !important;
 }
 .nextPrevArrows button:hover { background: var(--accent) !important; color: var(--accent-ink) !important; }
 .nextPrevArrows button:active { transform: scale(0.94); }
-.slider .list .item img { box-shadow: none !important; }
-.slider .list .item::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgba(0,0,0,0.12), transparent 22%, transparent 70%, color-mix(in srgb, var(--bg) 70%, transparent));
+@media (max-width: 700px) {
+  .slider { aspect-ratio: 4 / 3; margin-top: 84px !important; border-radius: var(--r-m); }
 }
 
 /* ---------- about ---------- */
@@ -278,3 +297,26 @@ div.bg-white.borderRadius-12::before {
 .borderRadius-12.group a:hover i { color: var(--accent) !important; }
 label { color: var(--ink-2) !important; }
 .cardx { background: var(--glass) !important; border: 1px solid var(--glass-line); border-radius: var(--r-m); box-shadow: var(--glass-shadow); }
+
+/* ---------- small screens: tiles grow with their text instead of clipping it ---------- */
+.event-card { width: min(400px, 100%) !important; height: auto !important; min-height: 220px; }
+.tier-card { width: min(500px, 100%) !important; height: auto !important; min-height: 557px; }
+.card { max-width: 100%; height: auto !important; min-height: 400px; }
+.card .hover-box { width: min(261px, 86%) !important; }
+.industry { max-width: 100%; }
+.card, .provideCard, .testimonial-card, .event-card, .ec-card, .ec-sidebar-item, .tier-card, .translucent-box {
+  min-width: 0;
+}
+.card :is(h1, h2, h3, h4, p, span, small, li, a),
+.provideCard :is(h3, p),
+.event-card :is(h1, h2, h3, h4, p, span, li),
+.tier-card :is(h1, h2, h3, h4, p, span, li, a),
+.testimonial-card :is(p, h3, span),
+.ec-card :is(h3, p, span),
+.ec-sidebar-item :is(h4, p, span),
+.translucent-box :is(p, h3) { overflow-wrap: anywhere; word-break: normal; }
+@media (max-width: 480px) {
+  .event-card, .tier-card { padding: 16px !important; }
+  .provide-grid-container h3, .provide-grid-container .card-title { font-size: 1.15rem !important; }
+  .event-card-container { padding: 12px !important; }
+}
