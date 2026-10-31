@@ -138,10 +138,10 @@ const Navbar = () => {
               </button>
 
               <ul className={`sub-menu ${activeDropdown === "events" ? "show" : ""}`}>
-                {/* 🔹 Upcoming Event → TPP Workshop */}
+                {/* 🔹 Upcoming Event → Membership Drive */}
                 <li>
-                  <Link to="/symp2" onClick={closeSidebar} className="uppercase">
-                    Upcoming (Melange 26 -Symposium)
+                  <Link to="/join_ieee" onClick={closeSidebar} className="uppercase">
+                    Upcoming (Membership Drive 26-27)
                   </Link>
                 </li>
 
