@@ -24,7 +24,7 @@ const councilMembers = [
   { name: "Riju Mishra", role: "Senior Graphics Head", image: Riju },
   { name: "Gayatri Bajaj", role: "Senior Tech Head", image: Gayatri },
   { name: "Vansh Lalwani", role: "Senior Tech Head", image: Vansh, email: "d2025.vansh.lalwani@ves.ac.in", github: "https://github.com/VL0650", linkedin: "https://www.linkedin.com/in/vansh-lalwani-9a58a0245" },
-  { name: "Varnika Chaurasia", role: "Women in Engineering", image: Varnika },
+  { name: "Varnika Chaurasia", role: "Women in Engineering", image: Varnika, email: "varnikachaurasia3001@gmail.com", github: "https://github.com/varnika-30" },
 ];
 
 const CurrentCouncil2627 = () => {

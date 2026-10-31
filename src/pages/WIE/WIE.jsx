@@ -61,6 +61,8 @@ const Wie = () => {
               name="Varnika Chaurasia"
               role="Women in Engineering"
               image={varnika}
+              email="varnikachaurasia3001@gmail.com"
+              github="https://github.com/varnika-30"
             />
           </div>
         </div>
