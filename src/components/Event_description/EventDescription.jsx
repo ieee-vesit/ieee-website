@@ -8,7 +8,9 @@ const EventDescription = ({
   image,
   description,
   linkform,
-  galleryImages   // 🔥 NEW PROP
+  galleryImages,  // 🔥 NEW PROP
+  hideRegister = false,
+  imageFit = "cover"
 }) => {
 
   const [loading, setLoading] = useState(true);
@@ -84,7 +86,11 @@ const EventDescription = ({
           <img
             src={image}
             alt="event"
-            className="rounded-xl shadow-md hover:scale-105 transition duration-500 max-h-[450px] w-full object-cover"
+            className={
+              imageFit === "contain"
+                ? "rounded-xl shadow-md max-h-[650px] w-auto max-w-full object-contain"
+                : "rounded-xl shadow-md hover:scale-105 transition duration-500 max-h-[450px] w-full object-cover"
+            }
           />
         </div>
 
@@ -94,6 +100,7 @@ const EventDescription = ({
         </div>
 
         {/* Register Button */}
+        {!hideRegister && (
         <div className="flex justify-center mb-12">
           <button
             onClick={() => window.open("https://forms.gle/gPrA2sc8sUVoVxbY8", "_blank")}
@@ -104,6 +111,7 @@ const EventDescription = ({
             REGISTER NOW
           </button>
         </div>
+        )}
 
         {/* Gallery */}
         <div className="mt-6">

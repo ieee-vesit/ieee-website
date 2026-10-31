@@ -33,7 +33,11 @@ const events = [
     { day: 24, month: 3, year: 2026, title: "Machine Minds Day 2", time: "2:30 PM", link: "/machine_minds",tag:"Workshop" },
     { day: 13, month: 2, year: 2026, title: "Capture the Flag", time: "12:30 PM", link: "/CTF",tag:"Workshop" },
     { day: 4, month: 1, year: 2026, title: "Arcane Hackathon", time: "24 Hrs Online", link: "/Arcane",tag:"Workshop" },
-    { day: 10, month: 4, year: 2026, title: "Melange 26 (Symposium)", time: "2:30 PM ", link: "/symp2",tag:"Workshop" }
+    { day: 10, month: 4, year: 2026, title: "Melange 26 (Symposium)", time: "2:30 PM ", link: "/symp2",tag:"Workshop" },
+    { day: 23, month: 9, year: 2026, title: "CareerSync", time: "1:30 PM", link: "/careersync",tag:"Talk" },
+    { day: 14, month: 10, year: 2026, title: "Workshop on IEEE Xplore Digital Library", time: "11:30 AM onwards", link: "/ieee_xplore",tag:"Workshop" },
+    { day: 21, month: 10, year: 2026, title: "APIcalypse Day 1", time: "2:30 PM onwards", link: "/apicalypse26",tag:"Workshop" },
+    { day: 22, month: 10, year: 2026, title: "APIcalypse Day 2", time: "2:30 PM onwards", link: "/apicalypse26",tag:"Workshop" }
   
 ];
 
