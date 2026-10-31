@@ -26,7 +26,7 @@
 
   /* text */
   --ink: #0d1822;
-  --ink-2: #435568;
+  --ink-2: #2f4256;
   --ink-3: #75869a;
 
   /* brand */
@@ -43,7 +43,7 @@
   --glass-edge: rgba(13, 24, 34, 0.07);
   --glass-shadow: 0 1.5px 0 rgba(255, 255, 255, 1) inset, 0 -1px 0 rgba(255, 255, 255, 0.35) inset, 0 16px 40px -14px rgba(20, 60, 90, 0.28);
   --glass-shadow-hover: 0 1.5px 0 rgba(255, 255, 255, 1) inset, 0 -1px 0 rgba(255, 255, 255, 0.4) inset, 0 26px 50px -16px rgba(20, 60, 90, 0.36);
-  --sheen: rgba(255, 255, 255, 0.7);
+  --sheen: rgba(255, 255, 255, 0.28);
   --blur: 24px;
   --hairline: rgba(13, 24, 34, 0.1);
 
@@ -179,6 +179,7 @@ img { -webkit-user-drag: none; }
 
 .glass {
   position: relative;
+  isolation: isolate;
   background: var(--gloss), var(--glass);
   border: 1px solid var(--glass-line);
   box-shadow: var(--glass-shadow);
@@ -194,6 +195,7 @@ img { -webkit-user-drag: none; }
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
+  z-index: -1;
   opacity: 0;
   background: radial-gradient(340px circle at var(--mx, 50%) var(--my, 0%), var(--sheen), transparent 62%);
   transition: opacity var(--t) var(--ease);

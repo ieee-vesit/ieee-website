@@ -16,6 +16,7 @@
 .community-stats-card,
 .faq-item {
   position: relative;
+  isolation: isolate;
   background: var(--gloss), var(--glass) !important;
   border: 1px solid var(--glass-line) !important;
   box-shadow: var(--glass-shadow) !important;
@@ -46,6 +47,7 @@
   inset: 0;
   border-radius: inherit;
   pointer-events: none;
+  z-index: -1;
   opacity: 0;
   background: radial-gradient(340px circle at var(--mx, 50%) var(--my, 0%), var(--sheen), transparent 62%);
   transition: opacity var(--t) var(--ease);
@@ -128,6 +130,7 @@
   background: var(--gloss);
   border-radius: inherit;
   pointer-events: none;
+  z-index: -1;
 }
 .provideCard svg, .provideCard i, .provideCard img { transition: transform 0.6s var(--ease); }
 .provideCard:hover svg, .provideCard:hover i { transform: translateY(-4px) scale(1.06); }
@@ -235,14 +238,14 @@ footer hr, footer .border-b { border-color: var(--hairline) !important; backgrou
   border-radius: inherit;
   background: var(--gloss);
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
-.provideCard::before { z-index: 0; }
 .nav-burger, .theme-toggle { box-shadow: var(--glass-shadow); }
 nav.navbar-shell { box-shadow: 0 1px 0 rgba(255,255,255,0.55) inset; }
 [data-theme="dark"] nav.navbar-shell { box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset; }
 nav.navbar-shell .navbar .links li .sub-menu { background: var(--glass-strong); }
-nav.navbar-shell .navbar .links li .sub-menu::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: var(--gloss); pointer-events: none; }
+nav.navbar-shell .navbar .links li .sub-menu { isolation: isolate; }
+nav.navbar-shell .navbar .links li .sub-menu::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: var(--gloss); pointer-events: none; z-index: -1; }
 .nav-join { box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset, 0 8px 18px -8px var(--accent); }
 .btn { box-shadow: 0 1px 0 rgba(255,255,255,0.35) inset, 0 8px 18px -8px var(--accent); }
 
@@ -255,6 +258,7 @@ section .borderRadius-12.custom-shadow,
 .borderRadius-12.group,
 div.bg-white.borderRadius-12 {
   position: relative;
+  isolation: isolate;
   background: var(--glass) !important;
   border: 1px solid var(--glass-line) !important;
   -webkit-backdrop-filter: blur(var(--blur)) saturate(180%);
@@ -263,7 +267,7 @@ div.bg-white.borderRadius-12 {
 .borderRadius-12.group::before,
 div.bg-white.borderRadius-12::before {
   content: ""; position: absolute; inset: 0; border-radius: inherit;
-  background: var(--gloss); pointer-events: none;
+  background: var(--gloss); pointer-events: none; z-index: -1;
 }
 .borderRadius-12.group:hover { box-shadow: var(--glass-shadow-hover) !important; border-color: var(--glass-line) !important; }
 .borderRadius-12.group > .absolute { display: none; }
